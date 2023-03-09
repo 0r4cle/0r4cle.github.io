@@ -16,13 +16,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon: 'heroicons_outline:document-text',
         link: '/dashboards/notes',
     },
-    {
-        id: 'events',
-        title: 'Events',
-        type: 'basic',
-        icon: 'heroicons_outline:calendar',
-        link: '/dashboards/events',
-    },
+//     {
+//         id: 'events',
+//         title: 'Events',
+//         type: 'basic',
+//         icon: 'heroicons_outline:calendar',
+//         link: '/dashboards/events',
+//     },
     {
         id: 'settings',
         title: 'Settings',
