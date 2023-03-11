@@ -46,23 +46,15 @@ export class HomeComponent {
     }
 
     // CALCUL
-    projectcount: number = 0;
-
-    projectcountstop: any = setInterval(() => {
-        this.projectcount++;
-        if (this.projectcount == 143) {
-            clearInterval(this.projectcountstop);
-        }
-    }, 10);
 
     coinscount: number = 0;
 
     coinscountstop: any = setInterval(() => {
         this.coinscount++;
-        if (this.coinscount == 600) {
+        if (this.coinscount == userData.coins) {
             clearInterval(this.coinscountstop);
         }
-    }, 0);
+    }, 1);
 
     eventscount: number = 0;
 
@@ -80,5 +72,5 @@ export class HomeComponent {
         if (this.percentcount == 28) {
             clearInterval(this.percentcountstop);
         }
-    }, 100);
+    }, 50);
 }

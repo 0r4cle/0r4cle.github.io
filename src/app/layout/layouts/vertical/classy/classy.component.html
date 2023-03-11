@@ -3,7 +3,7 @@
 
 <!-- Navigation -->
 <fuse-vertical-navigation
-    class="dark:bg-zinc-900 bg-white print:hidden"
+    class="dark:bg-zinc-900 bg-white print:hidden h-full"
     [mode]="isScreenSmall ? 'over' : 'side'"
     [name]="'mainNavigation'"
     [navigation]="navigation.default"
@@ -12,12 +12,12 @@
     <!-- Navigation header hook -->
     <ng-container fuseVerticalNavigationContentHeader>
         <div
-            class="flex items-center w-full sm:p-9 md:pl-9 sm:pt-18 md:pt-3 xl:pt-15 lg:pt-10 sm:pl-10 md:pl-10"
+            class="flex items-center w-full sm:p-9 md:pl-9 sm:pt-18 md:pt-3 xl:pt-7 lg:pt-10 sm:pl-10 md:pl-10"
         >
             <!-- Logo -->
             <a href="dashboards/home">
                 <div
-                    class="text-center w-50 absolute items-center -mt-14 ml-6 justify-center text-4xl font-bold dark:text-white text-slate-900 md:visible sm:visible invisible"
+                    class="text-center w-50 absolute items-center xxl:-mt-12 xl:-mt-12 lg:-mt-14 md:-mt-10 sm:-mt-22 ml-6 justify-center text-4xl font-bold dark:text-white text-slate-900 md:visible sm:visible invisible"
                 >
                     <!-- BLACK -->
                     <svg
@@ -213,10 +213,10 @@
     <!-- Navigation footer hook -->
     <ng-container fuseVerticalNavigationContentFooter>
         <div
-            class="flex flex-0 items-center justify-center pr-6 pl-2 mt-2 mb-4 xxl:mt-60 opacity-12"
+            class="flex flex-0 items-center justify-center pr-6 pl-2 mt-2 mb-4 xxl:mt-80 xl:mt-40 opacity-12"
         ></div>
         <div
-            class="flex flex-col items-center md:h-40 sm:h-40 lg:h-40 h-13 w-67 md:w-60 sm:w-60 lg:w-60 ml-5 mr-4 sm:mt-10 md:mt-10 lg:mt-10 xl:mt-10 md:drop-shadow-xl justify-center sm:rounded-2xl rounded-xl md:rounded-2xl overflow-hidden bg-slate-900 dark:bg-neutral-600 dark:border-none sm:border-solid md:border-solid md:border-2 border-none sm:border-2 border-gray-200"
+            class="flex flex-col items-center place-items-center self-center mr-5 md:h-40 sm:h-40 lg:h-40 h-13 w-67 md:w-60 sm:w-60 lg:w-60 ml-5 justify-center sm:mt-10 md:mt-10 lg:mt-10 xl:mt-10 md:drop-shadow-xl justify-center sm:rounded-2xl rounded-xl md:rounded-2xl overflow-hidden bg-slate-900 dark:bg-neutral-600 dark:border-none sm:border-solid md:border-solid md:border-2 border-none sm:border-2 border-gray-200"
         >
             <div
                 class="text-white sm:visible invisible md:visible text-center font-bold flex"
@@ -230,7 +230,7 @@
             </div>
             <a
                 href="dashboards/help-center"
-                class="text-white text-center sm:invisible visible md:invisible font-bold"
+                class="text-white text-center sm:invisible visible md:invisible font-semibold xl:font-bold"
             >
                 Support
             </a>
@@ -293,8 +293,8 @@
         <div
             class="sm:relative md:relative xl:flex md:flex sm:flex lg:flex items-center w-full h-16 px-4 md:px-6 z-49 dark:shadow-none bg-white sm:bg-transparent md:bg-transparent sm:dark:bg-transparent md:dark:bg-transparent fixed dark:bg-neutral-900 print:hidden"
         >
-            <!-- Navigation toggle button -->
-            <div class="mt-3">
+            <!-- Navigation toggle button mt-3 class-->
+            <div class="sm:mt-1 mt-3">
                 <button
                     mat-icon-button
                     (click)="toggleNavigation('mainNavigation')"
@@ -315,14 +315,16 @@
                     class="md:hidden sm:hidden font-bold flex justify-center content-center items-center place-self-center self-center text-4xl dark:text-white text-black"
                 >
                     <a
-                        class="justify-center content-center flex items-center place-self-center self-center"
+                        class="justify-center content-center flex items-center text-center place-self-center self-center"
                         href="#"
                     >
                         AMOS
                     </a>
                 </h1>
             </div>
-
+            <languages
+                class="md:invisible sm:invisible visible justify-end content-end flex items-end place-self-end self-end -mt-11"
+            ></languages>
             <div
                 class="flex items-center pl-2 ml-auto space-x-0.5 sm:space-x-2"
             >
