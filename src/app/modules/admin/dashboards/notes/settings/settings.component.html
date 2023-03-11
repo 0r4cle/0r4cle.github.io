@@ -4,7 +4,7 @@
     <mat-drawer-container class="flex-auto sm:h-full bg-transparent">
         <!-- Drawer -->
         <mat-drawer
-            class="sm:w-96 md:bg-white/50 md:dark:bg-black/50 sm:bg-white bg-white"
+            class="sm:w-96 xl:bg-white/50 xl:dark:bg-black/50 lg:bg-white/50 lg:dark:bg-black/50 sm:bg-white sm:bg-black dark:bg-black bg-white"
             [autoFocus]="false"
             [mode]="drawerMode"
             [opened]="drawerOpened"
@@ -33,7 +33,7 @@
                     <div
                         class="flex px-8 py-5 cursor-pointer"
                         [ngClass]="{
-                            'hover:bg-gray-100 dark:hover:bg-white/70':
+                            'hover:bg-gray-100 dark:hover:bg-gray-100/10':
                                 !selectedPanel || selectedPanel !== panel.id,
                             'bg-slate-300/20 dark:bg-hover':
                                 selectedPanel && selectedPanel === panel.id
