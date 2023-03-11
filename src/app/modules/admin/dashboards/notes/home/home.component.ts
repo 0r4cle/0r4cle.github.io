@@ -15,12 +15,6 @@ export class HomeComponent {
     public days: number;
     private _user: any = userData;
     user: User;
-    coinscount: number = 0;
-    eventscount: number = 0;
-    percentcount: number = 0;
-    coinscountstop: any;
-    eventscountstop: any;
-    percentcountstop: any;
 
     // STREAK
 
@@ -49,31 +43,42 @@ export class HomeComponent {
                 divElement.classList.add('ml-10');
             }
         }
-
-        // CALCUL
-
-        // Load coins count
-        this.coinscountstop = setInterval(() => {
-            this.coinscount++;
-            if (this.coinscount >= userData.coins) {
-                clearInterval(this.coinscountstop);
-            }
-        }, 1);
-
-        // Load events count
-        this.eventscountstop = setInterval(() => {
-            this.eventscount++;
-            if (this.eventscount == 5) {
-                clearInterval(this.eventscountstop);
-            }
-        }, 200);
-
-        // Load percent count
-        this.percentcountstop = setInterval(() => {
-            this.percentcount++;
-            if (this.percentcount == 28) {
-                clearInterval(this.percentcountstop);
-            }
-        }, 100);
     }
+
+    // CALCUL
+    projectcount: number = 0;
+
+    projectcountstop: any = setInterval(() => {
+        this.projectcount++;
+        if (this.projectcount == 143) {
+            clearInterval(this.projectcountstop);
+        }
+    }, 10);
+
+    coinscount: number = 0;
+
+    coinscountstop: any = setInterval(() => {
+        this.coinscount++;
+        if (this.coinscount == 600) {
+            clearInterval(this.coinscountstop);
+        }
+    }, 0);
+
+    eventscount: number = 0;
+
+    eventscountstop: any = setInterval(() => {
+        this.eventscount++;
+        if (this.eventscount == 5) {
+            clearInterval(this.eventscountstop);
+        }
+    }, 100);
+
+    percentcount: number = 0;
+
+    percentcountstop: any = setInterval(() => {
+        this.percentcount++;
+        if (this.percentcount == 28) {
+            clearInterval(this.percentcountstop);
+        }
+    }, 100);
 }
