@@ -16,7 +16,6 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon: 'heroicons_outline:document-text',
         link: '/dashboards/notes',
     },
-<<<<<<< HEAD
     // {
     //     id: 'events',
     //     title: 'Events',
@@ -24,15 +23,6 @@ export const defaultNavigation: FuseNavigationItem[] = [
     //     icon: 'heroicons_outline:calendar',
     //     link: '/dashboards/events',
     // },
-=======
-//     {
-//         id: 'events',
-//         title: 'Events',
-//         type: 'basic',
-//         icon: 'heroicons_outline:calendar',
-//         link: '/dashboards/events',
-//     },
->>>>>>> b059efdbc2673a6a20f9fc096118dd0bed670edf
     {
         id: 'settings',
         title: 'Settings',
