@@ -394,10 +394,16 @@ export class NotesDetailsComponent implements OnInit, OnDestroy {
             user.coins -= price;
 
             document.getElementById('coins').innerHTML = user.coins.toString();
+<<<<<<< HEAD
             document.getElementById('coinss').innerHTML = user.coins.toString();
 
             if (user.coins - price === 0) {
                 document.getElementById('coinsk').classList.add('blur-sm');
+=======
+
+            if (user.coins - price === 0) {
+                document.getElementById('coins').classList.add('blur-sm');
+>>>>>>> b059efdbc2673a6a20f9fc096118dd0bed670edf
             }
             // console.log(
             //     `Subtracted ${price} coins from user's balance. New balance: ${user.coins}`

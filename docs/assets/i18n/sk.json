@@ -13,6 +13,7 @@
 
     "Others Notes": "Poznámky Ostatných",
     "Have a Look at Others Notes": "Pozrite sa na Poznámky ostatných ",
+<<<<<<< HEAD
     "Look": "Pozrieť",
 
     "Your Notes": "Tvoje Poznamky",
@@ -22,6 +23,17 @@
     "Your Coins": "Tvoje Mince",
     "Events": "Udalostí",
     "Target For Next Event": "Cieľ na ďalšiu udalosť",
+=======
+    "Look": "Pozri",
+
+    "Your Notes": "Tvoje Poznamky",
+    "Make Better Learning Possible": "Umožni Zlepšenie    učenia",
+    "Add": "Pridaj",
+
+    "Your Coins": "Tvoje Mince",
+    "Events": "Udalostí",
+    "Target For The Next Event": "Cieľ na ďalšiu udalosť",
+>>>>>>> b059efdbc2673a6a20f9fc096118dd0bed670edf
 
     "Leaderboard": "Rebríček"
 }
