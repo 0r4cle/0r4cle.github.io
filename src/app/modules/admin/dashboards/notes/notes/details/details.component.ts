@@ -45,6 +45,7 @@ export class NotesDetailsComponent implements OnInit, OnDestroy {
     public user: User;
     noteChanged: Subject<Note> = new Subject<Note>();
     private _unsubscribeAll: Subject<any> = new Subject<any>();
+    note: Note; // add the note property to the component
 
     // LIKE DISLIKE
     likes = 0;
@@ -67,6 +68,7 @@ export class NotesDetailsComponent implements OnInit, OnDestroy {
         private _notesService: NotesService,
         private _matDialogRef: MatDialogRef<NotesDetailsComponent>
     ) {
+        this.note = _data.note;
         this.userService.user$.subscribe((user) => {
             this.user = user;
             this.handleCoinUpdate();
@@ -280,6 +282,14 @@ export class NotesDetailsComponent implements OnInit, OnDestroy {
 
         // Update the note
         this.noteChanged.next(note);
+    }
+
+    updatePfp() {
+        if (this.note.archived) {
+            this.user.pfp = user.avatar;
+        } else {
+            this.user.pfp = 'assets/images/avatars/male-15.jpg';
+        }
     }
 
     /**

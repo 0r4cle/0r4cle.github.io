@@ -34,17 +34,15 @@ export class SettingsAccountComponent implements OnInit {
     ngOnInit(): void {
         // Create the form
         this.accountForm = this._formBuilder.group({
-            name: ['Stanko Draskovic'],
-            username: ['stankod'],
+            name: ['Samuel Zima'],
+            username: ['Samo'],
             title: ['Student'],
             company: ['YXZ Software'],
-            about: [
-                "Hey! This is Stanko; wife, father and gamer. I'm mostly passionate about bleeding edge tech and chocolate! 🍫",
-            ],
-            email: ['hughes.brian@mail.com', Validators.email],
-            phone: ['121-490-33-12'],
-            country: ['usa'],
-            language: ['english'],
+            about: [],
+            email: ['samuel.zima@mail.com', Validators.email],
+            phone: ['+421 907 483 564'],
+            country: ['slovakia'],
+            language: ['slovak'],
         });
     }
 }

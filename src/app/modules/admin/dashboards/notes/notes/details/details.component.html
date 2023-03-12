@@ -111,7 +111,7 @@
                         ></mat-icon>
                     </button>
                     <span class="text-xl text-green-600 mr-2">{{
-                        likes || 0
+                        note.likes || 0
                     }}</span>
 
                     <button class="text-red-500 mr-2" (click)="dislike()">
@@ -121,7 +121,7 @@
                     </button>
 
                     <span class="text-xl text-red-600 mr-2">{{
-                        dislikes || 0
+                        note.dislikes || 0
                     }}</span>
                 </div>
             </ng-container>
@@ -152,18 +152,18 @@
             <ng-container *ngIf="note.archived">
                 <div class="flex items-end grid flex-wrap relative">
                     <div
-                        class="text-purple-400 mr-10 place-self-end grid flex self-end items-end justify-self-end justify-end place-items-end place-content-end content-end text-3xl font-semibold"
+                        class="text-black dark:text-white mr-10 place-self-end grid flex self-end items-end justify-self-end justify-end place-items-end place-content-end content-end text-3xl font-semibold"
                     >
                         {{ note.price }}
                         <div class="flex grid absolute -mr-7 mb-1.5">
                             <img
                                 class="w-6 h-6 dark:hidden block"
-                                src="/assets/images/logo/coinb.svg"
+                                src="/assets/images/logo/coinsoran.svg"
                                 alt=""
                             />
                             <img
                                 class="w-6 h-6 dark:block hidden"
-                                src="/assets/images/logo/coinw.svg"
+                                src="/assets/images/logo/coinsoran.svg"
                                 alt=""
                             />
                         </div>
@@ -307,7 +307,7 @@
                     <ng-container *ngIf="!note.archived">
                         <button
                             class="bg-blue-200 font-medium text-black w-15 h-10 rounded-full"
-                            (click)="toggleArchiveOnNote(note)"
+                            (click)="toggleArchiveOnNote(note); updatePfp()"
                         >
                             Sell
                         </button>

@@ -1,205 +1,234 @@
 <div
-    class="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0"
+    class="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start bg-pattern-img dark:bg-bpattern-img flex-auto min-w-0"
 >
-    <div
-        class="flex flex-col h-full w-full dark:bg-zinc-800 bg-neutral-100 absolute dark:bg-bpattern-img bg-pattern-img bg-cover"
+    <!-- LOGO -->
+
+    <!-- BLACK -->
+    <svg
+        class="dark:visible invisible absolute xl:mt-10 xl:ml-12 mt-4 ml-0 md:ml-12 md:mt-10 sm:ml-0 sm:-mt-140"
+        width="100"
+        height="31"
+        viewBox="0 0 514 150"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
     >
-        <!-- LOGO -->
-        <svg
-            class="absolute mt-10 ml-10"
-            width="100"
-            height="31"
-            viewBox="0 0 100 31"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <path
-                d="M35.011 4.22909H40.4905L46.2778 18.2176H46.524L52.3113 4.22909H57.7908V25.0492H53.4811V11.4978H53.3067L47.8682 24.9475H44.9336L39.4952 11.447H39.3207V25.0492H35.011V4.22909Z"
-                fill="#0F172A"
-            />
-            <path
-                d="M80.7629 14.6391C80.7629 16.9096 80.3285 18.8411 79.4598 20.4338C78.5978 22.0265 77.4212 23.243 75.9299 24.0834C74.4455 24.917 72.7763 25.3339 70.9225 25.3339C69.055 25.3339 67.379 24.9137 65.8945 24.0733C64.4101 23.2329 63.2369 22.0163 62.3749 20.4236C61.513 18.831 61.082 16.9028 61.082 14.6391C61.082 12.3687 61.513 10.4372 62.3749 8.84448C63.2369 7.2518 64.4101 6.03865 65.8945 5.20503C67.379 4.36463 69.055 3.94444 70.9225 3.94444C72.7763 3.94444 74.4455 4.36463 75.9299 5.20503C77.4212 6.03865 78.5978 7.2518 79.4598 8.84448C80.3285 10.4372 80.7629 12.3687 80.7629 14.6391ZM76.2583 14.6391C76.2583 13.1685 76.0359 11.9282 75.5913 10.9184C75.1535 9.90853 74.5344 9.14269 73.734 8.62083C72.9337 8.09897 71.9965 7.83804 70.9225 7.83804C69.8485 7.83804 68.9113 8.09897 68.1109 8.62083C67.3106 9.14269 66.688 9.90853 66.2434 10.9184C65.8056 11.9282 65.5867 13.1685 65.5867 14.6391C65.5867 16.1098 65.8056 17.3501 66.2434 18.3599C66.688 19.3698 67.3106 20.1356 68.1109 20.6575C68.9113 21.1793 69.8485 21.4402 70.9225 21.4402C71.9965 21.4402 72.9337 21.1793 73.734 20.6575C74.5344 20.1356 75.1535 19.3698 75.5913 18.3599C76.0359 17.3501 76.2583 16.1098 76.2583 14.6391Z"
-                fill="#0F172A"
-            />
-            <path
-                d="M95.4543 10.2169C95.3722 9.39684 95.0199 8.75977 94.3974 8.30568C93.7749 7.8516 92.9301 7.62455 91.8629 7.62455C91.1378 7.62455 90.5255 7.72621 90.0262 7.92954C89.5268 8.12608 89.1437 8.40057 88.8769 8.75299C88.617 9.10541 88.487 9.50528 88.487 9.95259C88.4733 10.3253 88.552 10.6507 88.723 10.9285C88.9009 11.2064 89.1437 11.447 89.4515 11.6503C89.7594 11.8469 90.1151 12.0197 90.5187 12.1688C90.9223 12.3111 91.3533 12.4331 91.8116 12.5348L93.6997 12.9821C94.6163 13.1854 95.4577 13.4565 96.2239 13.7954C96.9901 14.1342 97.6536 14.551 98.2146 15.0458C98.7755 15.5405 99.2099 16.1234 99.5177 16.7944C99.8324 17.4653 99.9932 18.2345 100 19.1021C99.9932 20.3762 99.6648 21.4809 99.0149 22.4162C98.3719 23.3447 97.4416 24.0665 96.2239 24.5816C95.0131 25.0899 93.5526 25.344 91.8424 25.344C90.1459 25.344 88.6683 25.0865 87.4096 24.5714C86.1577 24.0563 85.1795 23.2939 84.4749 22.284C83.7771 21.2674 83.4111 20.0102 83.3769 18.5124H87.6764C87.7242 19.2105 87.926 19.7933 88.2818 20.261C88.6443 20.7218 89.1266 21.0709 89.7286 21.3081C90.3374 21.5385 91.0249 21.6537 91.7911 21.6537C92.5436 21.6537 93.1969 21.5453 93.751 21.3284C94.3119 21.1115 94.7463 20.81 95.0541 20.4236C95.362 20.0373 95.5159 19.5934 95.5159 19.0919C95.5159 18.6242 95.3756 18.2312 95.0952 17.9126C94.8215 17.5941 94.4179 17.323 93.8844 17.0993C93.3576 16.8757 92.7112 16.6724 91.945 16.4894L89.6568 15.9201C87.885 15.4931 86.4861 14.8255 85.46 13.9174C84.4338 13.0092 83.9242 11.7859 83.931 10.2474C83.9242 8.98681 84.2628 7.88548 84.9469 6.94343C85.6378 6.00137 86.5853 5.26603 87.7892 4.73739C88.9932 4.20875 90.3614 3.94444 91.8937 3.94444C93.4534 3.94444 94.8147 4.20875 95.9776 4.73739C97.1474 5.26603 98.0572 6.00137 98.7071 6.94343C99.357 7.88548 99.6922 8.97664 99.7127 10.2169H95.4543Z"
-                fill="#0F172A"
-            />
-            <path
-                d="M15.915 3.39506C22.7585 3.39506 28.3288 8.7963 28.3288 15.4321C28.3288 22.0679 22.7585 27.4691 15.915 27.4691C9.07157 27.4691 3.50131 22.0679 3.50131 15.4321C3.50131 8.7963 9.07157 3.39506 15.915 3.39506ZM15.915 0C7.12675 0 0 6.91049 0 15.4321C0 23.9537 7.12675 30.8642 15.915 30.8642C24.7033 30.8642 31.8301 23.9537 31.8301 15.4321C31.8301 6.91049 24.7033 0 15.915 0Z"
-                fill="#376DED"
-            />
-            <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M19.7701 6.03865H12.06C11.8826 6.03865 11.7388 6.19885 11.7388 6.39649V9.1698H8.73634C8.52439 9.1698 8.35257 9.30861 8.35257 9.47986V22.5026C8.35257 22.6739 8.52439 22.8127 8.73634 22.8127H11.8065C12.0184 22.8127 12.1902 22.6739 12.1902 22.5026V18.1159H19.6398V22.5026C19.6398 22.6739 19.8116 22.8127 20.0236 22.8127H23.0937C23.3057 22.8127 23.4775 22.6739 23.4775 22.5026V9.47986C23.4775 9.30861 23.3057 9.1698 23.0937 9.1698H20.0913V6.39649C20.0913 6.19885 19.9475 6.03865 19.7701 6.03865ZM19.6398 14.5375V9.61711H12.1902V14.5375H19.6398Z"
-                fill="#0F172A"
-            />
-        </svg>
-        <div
-            class="md:flex md:items-center md:justify-end w-full sm:w-auto md:h-full md:w-1/2 py-8 px-4 sm:p-12 md:p-16 sm:rounded-2xl md:rounded-none sm:shadow md:shadow-none sm:bg-card"
-        >
-            <div class="w-full max-w-80 sm:w-80 mx-auto sm:mx-0">
-                <!-- Logo -->
-                <div class="w-12">
-                    <img src="" />
-                </div>
+        <path
+            d="M155.091 30.9091H179.364L205 93.4545H206.091L231.727 30.9091H256V124H236.909V63.4091H236.136L212.045 123.545H199.045L174.955 63.1818H174.182V124H155.091V30.9091ZM357.761 77.4545C357.761 87.6061 355.837 96.2424 351.989 103.364C348.17 110.485 342.958 115.924 336.352 119.682C329.777 123.409 322.383 125.273 314.17 125.273C305.898 125.273 298.473 123.394 291.898 119.636C285.322 115.879 280.125 110.439 276.307 103.318C272.489 96.197 270.58 87.5758 270.58 77.4545C270.58 67.303 272.489 58.6667 276.307 51.5455C280.125 44.4242 285.322 39 291.898 35.2727C298.473 31.5151 305.898 29.6364 314.17 29.6364C322.383 29.6364 329.777 31.5151 336.352 35.2727C342.958 39 348.17 44.4242 351.989 51.5455C355.837 58.6667 357.761 67.303 357.761 77.4545ZM337.807 77.4545C337.807 70.8788 336.822 65.3333 334.852 60.8182C332.913 56.303 330.17 52.8788 326.625 50.5455C323.08 48.2121 318.928 47.0455 314.17 47.0455C309.413 47.0455 305.261 48.2121 301.716 50.5455C298.17 52.8788 295.413 56.303 293.443 60.8182C291.504 65.3333 290.534 70.8788 290.534 77.4545C290.534 84.0303 291.504 89.5758 293.443 94.0909C295.413 98.6061 298.17 102.03 301.716 104.364C305.261 106.697 309.413 107.864 314.17 107.864C318.928 107.864 323.08 106.697 326.625 104.364C330.17 102.03 332.913 98.6061 334.852 94.0909C336.822 89.5758 337.807 84.0303 337.807 77.4545ZM422.841 57.6818C422.477 54.0151 420.917 51.1667 418.159 49.1364C415.402 47.1061 411.659 46.0909 406.932 46.0909C403.72 46.0909 401.008 46.5455 398.795 47.4545C396.583 48.3333 394.886 49.5606 393.705 51.1364C392.553 52.7121 391.977 54.5 391.977 56.5C391.917 58.1667 392.265 59.6212 393.023 60.8636C393.811 62.1061 394.886 63.1818 396.25 64.0909C397.614 64.9697 399.189 65.7424 400.977 66.4091C402.765 67.0455 404.674 67.5909 406.705 68.0455L415.068 70.0455C419.129 70.9545 422.856 72.1667 426.25 73.6818C429.644 75.197 432.583 77.0606 435.068 79.2727C437.553 81.4848 439.477 84.0909 440.841 87.0909C442.235 90.0909 442.947 93.5303 442.977 97.4091C442.947 103.106 441.492 108.045 438.614 112.227C435.765 116.379 431.644 119.606 426.25 121.909C420.886 124.182 414.417 125.318 406.841 125.318C399.326 125.318 392.78 124.167 387.205 121.864C381.659 119.561 377.326 116.152 374.205 111.636C371.114 107.091 369.492 101.47 369.341 94.7727H388.386C388.598 97.8939 389.492 100.5 391.068 102.591C392.674 104.652 394.811 106.212 397.477 107.273C400.174 108.303 403.22 108.818 406.614 108.818C409.947 108.818 412.841 108.333 415.295 107.364C417.78 106.394 419.705 105.045 421.068 103.318C422.432 101.591 423.114 99.6061 423.114 97.3636C423.114 95.2727 422.492 93.5152 421.25 92.0909C420.038 90.6667 418.25 89.4545 415.886 88.4545C413.553 87.4545 410.689 86.5455 407.295 85.7273L397.159 83.1818C389.311 81.2727 383.114 78.2879 378.568 74.2273C374.023 70.1667 371.765 64.697 371.795 57.8182C371.765 52.1818 373.265 47.2576 376.295 43.0455C379.356 38.8333 383.553 35.5455 388.886 33.1818C394.22 30.8182 400.28 29.6364 407.068 29.6364C413.977 29.6364 420.008 30.8182 425.159 33.1818C430.341 35.5455 434.371 38.8333 437.25 43.0455C440.129 47.2576 441.614 52.1364 441.705 57.6818H422.841Z"
+            fill="white"
+        />
+        <path
+            d="M70.5 27.18C100.815 27.18 125.49 51.33 125.49 81C125.49 110.67 100.815 134.82 70.5 134.82C40.185 134.82 15.51 110.67 15.51 81C15.51 51.33 40.185 27.18 70.5 27.18ZM70.5 12C31.5699 12 0 42.8982 0 81C0 119.102 31.5699 150 70.5 150C109.43 150 141 119.102 141 81C141 42.8982 109.43 12 70.5 12Z"
+            fill="#376DED"
+        />
+        <path
+            d="M102.3 53H88.7C87.7611 53 87 53.6207 87 54.3864V112.614C87 113.379 87.7611 114 88.7 114H102.3C103.239 114 104 113.379 104 112.614V54.3864C104 53.6207 103.239 53 102.3 53Z"
+            fill="white"
+        />
+        <path
+            d="M52.3 53H38.7C37.7611 53 37 53.6207 37 54.3864V112.614C37 113.379 37.7611 114 38.7 114H52.3C53.2389 114 54 113.379 54 112.614V54.3864C54 53.6207 53.2389 53 52.3 53Z"
+            fill="white"
+        />
+        <path
+            d="M87.5769 39H53.4231C52.6371 39 52 39.7163 52 40.6V53.4C52 54.2837 52.6371 55 53.4231 55H87.5769C88.3629 55 89 54.2837 89 53.4V40.6C89 39.7163 88.3629 39 87.5769 39Z"
+            fill="white"
+        />
+        <path
+            d="M87.5769 77H53.4231C52.6371 77 52 77.7163 52 78.6V91.4C52 92.2837 52.6371 93 53.4231 93H87.5769C88.3629 93 89 92.2837 89 91.4V78.6C89 77.7163 88.3629 77 87.5769 77Z"
+            fill="white"
+        />
+    </svg>
 
-                <!-- Title -->
-                <div
-                    class="mt-8 text-4xl font-extrabold tracking-tight leading-tight"
-                >
-                    Sign up
-                </div>
-                <div class="flex items-baseline mt-0.5 font-medium">
-                    <div>Already have an account?</div>
-                    <a
-                        class="ml-1 text-primary-500 hover:underline"
-                        [routerLink]="['/sign-in']"
-                        >Sign in
-                    </a>
-                </div>
+    <!-- WHITE -->
 
-                <!-- Alert -->
-                <fuse-alert
-                    class="mt-8 -mb-4"
-                    *ngIf="showAlert"
-                    [appearance]="'outline'"
-                    [showIcon]="false"
-                    [type]="alert.type"
-                    [@shake]="alert.type === 'error'"
-                >
-                    {{ alert.message }}
-                </fuse-alert>
-
-                <!-- Sign Up form -->
-                <form
-                    class="mt-8"
-                    [formGroup]="signUpForm"
-                    #signUpNgForm="ngForm"
-                >
-                    <!-- Name field -->
-                    <mat-form-field class="w-full">
-                        <mat-label>Full name</mat-label>
-                        <input id="name" matInput [formControlName]="'name'" />
-                        <mat-error
-                            *ngIf="signUpForm.get('name').hasError('required')"
-                        >
-                            Full name is required
-                        </mat-error>
-                    </mat-form-field>
-
-                    <!-- Email field -->
-                    <mat-form-field class="w-full">
-                        <mat-label>Email address</mat-label>
-                        <input
-                            id="email"
-                            matInput
-                            [formControlName]="'email'"
-                        />
-                        <mat-error
-                            *ngIf="signUpForm.get('email').hasError('required')"
-                        >
-                            Email address is required
-                        </mat-error>
-                        <mat-error
-                            *ngIf="signUpForm.get('email').hasError('email')"
-                        >
-                            Please enter a valid email address
-                        </mat-error>
-                    </mat-form-field>
-
-                    <!-- Password field -->
-                    <mat-form-field class="w-full">
-                        <mat-label>Password</mat-label>
-                        <input
-                            id="password"
-                            matInput
-                            type="password"
-                            [formControlName]="'password'"
-                            #passwordField
-                        />
-                        <button
-                            mat-icon-button
-                            type="button"
-                            (click)="
-                                passwordField.type === 'password'
-                                    ? (passwordField.type = 'text')
-                                    : (passwordField.type = 'password')
-                            "
-                            matSuffix
-                        >
-                            <mat-icon
-                                class="icon-size-5"
-                                *ngIf="passwordField.type === 'password'"
-                                [svgIcon]="'heroicons_solid:eye'"
-                            ></mat-icon>
-                            <mat-icon
-                                class="icon-size-5"
-                                *ngIf="passwordField.type === 'text'"
-                                [svgIcon]="'heroicons_solid:eye-off'"
-                            ></mat-icon>
-                        </button>
-                        <mat-error> Password is required </mat-error>
-                    </mat-form-field>
-
-                    <!-- Company field -->
-
-                    <!-- ToS and PP -->
-                    <div class="inline-flex items-end w-full mt-1.5">
-                        <mat-checkbox
-                            [color]="'primary'"
-                            [formControlName]="'agreements'"
-                        >
-                            <span>I agree to the</span>
-                            <a
-                                class="ml-1 text-primary-500 hover:underline"
-                                [routerLink]="['./']"
-                                >Terms of Service
-                            </a>
-                            <span>and</span>
-                            <a
-                                class="ml-1 text-primary-500 hover:underline"
-                                [routerLink]="['./']"
-                                >Privacy Policy
-                            </a>
-                        </mat-checkbox>
-                    </div>
-
-                    <!-- Submit button -->
-                    <button
-                        class="fuse-mat-button-large rounded-xl w-full mt-6 bg-blue-400"
-                        mat-flat-button
-                        [color]="'primary'"
-                        [disabled]="signUpForm.disabled"
-                        (click)="signUp()"
-                    >
-                        <span *ngIf="!signUpForm.disabled">
-                            Create your account
-                        </span>
-                        <mat-progress-spinner
-                            *ngIf="signUpForm.disabled"
-                            [diameter]="24"
-                            [mode]="'indeterminate'"
-                        ></mat-progress-spinner>
-                    </button>
-                </form>
+    <svg
+        class="visible dark:invisible absolute xl:mt-10 xl:ml-12 mt-4 ml-0 md:ml-12 md:mt-10 sm:ml-0 sm:-mt-140"
+        width="120"
+        height="41"
+        viewBox="0 0 514 150"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            d="M155.091 30.9091H179.364L205 93.4545H206.091L231.727 30.9091H256V124H236.909V63.4091H236.136L212.045 123.545H199.045L174.955 63.1818H174.182V124H155.091V30.9091ZM357.761 77.4545C357.761 87.6061 355.837 96.2424 351.989 103.364C348.17 110.485 342.958 115.924 336.352 119.682C329.777 123.409 322.383 125.273 314.17 125.273C305.898 125.273 298.473 123.394 291.898 119.636C285.322 115.879 280.125 110.439 276.307 103.318C272.489 96.197 270.58 87.5758 270.58 77.4545C270.58 67.303 272.489 58.6667 276.307 51.5455C280.125 44.4242 285.322 39 291.898 35.2727C298.473 31.5151 305.898 29.6364 314.17 29.6364C322.383 29.6364 329.777 31.5151 336.352 35.2727C342.958 39 348.17 44.4242 351.989 51.5455C355.837 58.6667 357.761 67.303 357.761 77.4545ZM337.807 77.4545C337.807 70.8788 336.822 65.3333 334.852 60.8182C332.913 56.303 330.17 52.8788 326.625 50.5455C323.08 48.2121 318.928 47.0455 314.17 47.0455C309.413 47.0455 305.261 48.2121 301.716 50.5455C298.17 52.8788 295.413 56.303 293.443 60.8182C291.504 65.3333 290.534 70.8788 290.534 77.4545C290.534 84.0303 291.504 89.5758 293.443 94.0909C295.413 98.6061 298.17 102.03 301.716 104.364C305.261 106.697 309.413 107.864 314.17 107.864C318.928 107.864 323.08 106.697 326.625 104.364C330.17 102.03 332.913 98.6061 334.852 94.0909C336.822 89.5758 337.807 84.0303 337.807 77.4545ZM422.841 57.6818C422.477 54.0151 420.917 51.1667 418.159 49.1364C415.402 47.1061 411.659 46.0909 406.932 46.0909C403.72 46.0909 401.008 46.5455 398.795 47.4545C396.583 48.3333 394.886 49.5606 393.705 51.1364C392.553 52.7121 391.977 54.5 391.977 56.5C391.917 58.1667 392.265 59.6212 393.023 60.8636C393.811 62.1061 394.886 63.1818 396.25 64.0909C397.614 64.9697 399.189 65.7424 400.977 66.4091C402.765 67.0455 404.674 67.5909 406.705 68.0455L415.068 70.0455C419.129 70.9545 422.856 72.1667 426.25 73.6818C429.644 75.197 432.583 77.0606 435.068 79.2727C437.553 81.4848 439.477 84.0909 440.841 87.0909C442.235 90.0909 442.947 93.5303 442.977 97.4091C442.947 103.106 441.492 108.045 438.614 112.227C435.765 116.379 431.644 119.606 426.25 121.909C420.886 124.182 414.417 125.318 406.841 125.318C399.326 125.318 392.78 124.167 387.205 121.864C381.659 119.561 377.326 116.152 374.205 111.636C371.114 107.091 369.492 101.47 369.341 94.7727H388.386C388.598 97.8939 389.492 100.5 391.068 102.591C392.674 104.652 394.811 106.212 397.477 107.273C400.174 108.303 403.22 108.818 406.614 108.818C409.947 108.818 412.841 108.333 415.295 107.364C417.78 106.394 419.705 105.045 421.068 103.318C422.432 101.591 423.114 99.6061 423.114 97.3636C423.114 95.2727 422.492 93.5152 421.25 92.0909C420.038 90.6667 418.25 89.4545 415.886 88.4545C413.553 87.4545 410.689 86.5455 407.295 85.7273L397.159 83.1818C389.311 81.2727 383.114 78.2879 378.568 74.2273C374.023 70.1667 371.765 64.697 371.795 57.8182C371.765 52.1818 373.265 47.2576 376.295 43.0455C379.356 38.8333 383.553 35.5455 388.886 33.1818C394.22 30.8182 400.28 29.6364 407.068 29.6364C413.977 29.6364 420.008 30.8182 425.159 33.1818C430.341 35.5455 434.371 38.8333 437.25 43.0455C440.129 47.2576 441.614 52.1364 441.705 57.6818H422.841Z"
+            fill="#0F172A"
+        />
+        <path
+            d="M70.5 27.18C100.815 27.18 125.49 51.33 125.49 81C125.49 110.67 100.815 134.82 70.5 134.82C40.185 134.82 15.51 110.67 15.51 81C15.51 51.33 40.185 27.18 70.5 27.18ZM70.5 12C31.5699 12 0 42.8982 0 81C0 119.102 31.5699 150 70.5 150C109.43 150 141 119.102 141 81C141 42.8982 109.43 12 70.5 12Z"
+            fill="#376DED"
+        />
+        <path
+            d="M102.3 53H88.7C87.7611 53 87 53.6207 87 54.3864V112.614C87 113.379 87.7611 114 88.7 114H102.3C103.239 114 104 113.379 104 112.614V54.3864C104 53.6207 103.239 53 102.3 53Z"
+            fill="#0F172A"
+        />
+        <path
+            d="M52.3 53H38.7C37.7611 53 37 53.6207 37 54.3864V112.614C37 113.379 37.7611 114 38.7 114H52.3C53.2389 114 54 113.379 54 112.614V54.3864C54 53.6207 53.2389 53 52.3 53Z"
+            fill="#0F172A"
+        />
+        <path
+            d="M87.5769 39H53.4231C52.6371 39 52 39.7163 52 40.6V53.4C52 54.2837 52.6371 55 53.4231 55H87.5769C88.3629 55 89 54.2837 89 53.4V40.6C89 39.7163 88.3629 39 87.5769 39Z"
+            fill="#0F172A"
+        />
+        <path
+            d="M87.5769 77H53.4231C52.6371 77 52 77.7163 52 78.6V91.4C52 92.2837 52.6371 93 53.4231 93H87.5769C88.3629 93 89 92.2837 89 91.4V78.6C89 77.7163 88.3629 77 87.5769 77Z"
+            fill="#0F172A"
+        />
+    </svg>
+    <div
+        class="md:flex md:items-center md:justify-end w-full sm:w-auto md:h-full md:w-1/2 py-8 px-4 sm:p-12 md:p-16 sm:rounded-2xl md:rounded-none sm:shadow md:shadow-none sm:bg-card"
+    >
+        <div class="w-full max-w-80 sm:w-80 mx-auto sm:mx-0">
+            <!-- Logo -->
+            <div class="w-12">
+                <img src="" />
             </div>
-        </div>
-        <div
-            class="relative hidden md:flex flex-auto items-center justify-center w-ful h-full p-0 lg:px-28 overflow-hidden bg-white dark:bg-neutral-900"
-        >
-            <!-- Background - @formatter:off -->
-            <!-- Rings -->
 
-            <!-- h-full =width not moving -->
-            <img
-                class="ml-[300px] w-full h-full rounded-2xl object-cover"
-                src="/assets/images/logo/logg.svg"
-            />
-            <!-- @formatter:on -->
-            <!-- Content -->
-            <!-- <div class="z-10 absolute w-full max-w-2xl mt-180">
+            <!-- Title -->
+            <div
+                class="mt-8 text-4xl font-extrabold tracking-tight leading-tight"
+            >
+                Sign up
+            </div>
+            <div class="flex items-baseline mt-0.5 font-medium">
+                <div>Already have an account?</div>
+                <a
+                    class="ml-1 text-blue-400 hover:underline"
+                    [routerLink]="['/sign-in']"
+                    >Sign in
+                </a>
+            </div>
+
+            <!-- Alert -->
+            <fuse-alert
+                class="mt-8 -mb-4"
+                *ngIf="showAlert"
+                [appearance]="'outline'"
+                [showIcon]="false"
+                [type]="alert.type"
+                [@shake]="alert.type === 'error'"
+            >
+                {{ alert.message }}
+            </fuse-alert>
+
+            <!-- Sign Up form -->
+            <form class="mt-8" [formGroup]="signUpForm" #signUpNgForm="ngForm">
+                <!-- Name field -->
+                <mat-form-field class="w-full">
+                    <mat-label>Full name</mat-label>
+                    <input id="name" matInput [formControlName]="'name'" />
+                    <mat-error
+                        *ngIf="signUpForm.get('name').hasError('required')"
+                    >
+                        Full name is required
+                    </mat-error>
+                </mat-form-field>
+
+                <!-- Email field -->
+                <mat-form-field class="w-full">
+                    <mat-label>Email address</mat-label>
+                    <input id="email" matInput [formControlName]="'email'" />
+                    <mat-error
+                        *ngIf="signUpForm.get('email').hasError('required')"
+                    >
+                        Email address is required
+                    </mat-error>
+                    <mat-error
+                        *ngIf="signUpForm.get('email').hasError('email')"
+                    >
+                        Please enter a valid email address
+                    </mat-error>
+                </mat-form-field>
+
+                <!-- Password field -->
+                <mat-form-field class="w-full">
+                    <mat-label>Password</mat-label>
+                    <input
+                        id="password"
+                        matInput
+                        type="password"
+                        [formControlName]="'password'"
+                        #passwordField
+                    />
+                    <button
+                        mat-icon-button
+                        type="button"
+                        (click)="
+                            passwordField.type === 'password'
+                                ? (passwordField.type = 'text')
+                                : (passwordField.type = 'password')
+                        "
+                        matSuffix
+                    >
+                        <mat-icon
+                            class="icon-size-5"
+                            *ngIf="passwordField.type === 'password'"
+                            [svgIcon]="'heroicons_solid:eye'"
+                        ></mat-icon>
+                        <mat-icon
+                            class="icon-size-5"
+                            *ngIf="passwordField.type === 'text'"
+                            [svgIcon]="'heroicons_solid:eye-off'"
+                        ></mat-icon>
+                    </button>
+                    <mat-error> Password is required </mat-error>
+                </mat-form-field>
+
+                <!-- Company field -->
+
+                <!-- ToS and PP -->
+                <div class="inline-flex items-end w-full mt-1.5">
+                    <mat-checkbox
+                        [color]="'primary'"
+                        [formControlName]="'agreements'"
+                    >
+                        <span>I agree to the</span>
+                        <a
+                            class="ml-1 text-blue-400 hover:underline"
+                            [routerLink]="['./']"
+                            >Terms of Service
+                        </a>
+                        <span>and</span>
+                        <a
+                            class="ml-1 text-blue-400 hover:underline"
+                            [routerLink]="['./']"
+                            >Privacy Policy
+                        </a>
+                    </mat-checkbox>
+                </div>
+
+                <!-- Submit button -->
+                <button
+                    class="fuse-mat-button-large rounded-xl w-full mt-6 bg-blue-400"
+                    mat-flat-button
+                    [color]="'primary'"
+                    [disabled]="signUpForm.disabled"
+                    (click)="signUp()"
+                >
+                    <span *ngIf="!signUpForm.disabled">
+                        Create your account
+                    </span>
+                    <mat-progress-spinner
+                        *ngIf="signUpForm.disabled"
+                        [diameter]="24"
+                        [mode]="'indeterminate'"
+                    ></mat-progress-spinner>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div
+        class="relative hidden md:flex flex-auto items-center justify-center h-full p-0 overflow-hidden bg-white dark:bg-neutral-900"
+    >
+        <!-- Background - @formatter:off -->
+        <!-- Rings -->
+
+        <!-- h-full =width not moving -->
+        <img
+            class="ml-[360px] mx-auto flex justify-end z-10 grid place-items-end items-end w-full h-full object-cover"
+            src="/assets/images/logo/logg.svg"
+        />
+        <!-- @formatter:on -->
+        <!-- Content -->
+        <!-- <div class="z-10 absolute w-full max-w-2xl mt-180">
         <div class="text-4xl font-bold leading-none text-white">
             <div
                 class="bg-white/20 w-200 h-40 rounded-3xl backdrop-blur-lg p-12"
@@ -216,6 +245,6 @@
             </div>
         </div>
     </div> -->
-        </div>
+        <!-- </div> -->
     </div>
 </div>

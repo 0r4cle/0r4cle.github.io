@@ -32,7 +32,7 @@
                     </div>
                     <!-- Archive -->
                     <div
-                        class="relative flex items-center py-2 px-4 font-medium rounded-full cursor-pointer"
+                        class="relative flex items-center py-2 px-4 font-medium rounded-xl cursor-pointer"
                         [ngClass]="{
                             'bg-gray-200 dark:bg-gray-700 text-primary dark:text-primary-400':
                                 filterStatus === 'archived',
@@ -59,7 +59,7 @@
                             *ngFor="let label of labels; trackBy: trackByFn"
                         >
                             <div
-                                class="relative flex items-center py-2 px-4 font-medium rounded-full cursor-pointer"
+                                class="relative flex items-center py-2 px-4 font-medium rounded-xl cursor-pointer"
                                 [ngClass]="{
                                     'bg-gray-200 dark:bg-gray-700 text-primary dark:text-primary-400':
                                         'label:' + label.id === filterStatus,
@@ -251,7 +251,7 @@
                                                                             class="flex items-center justify-center w-5 h-5"
                                                                         >
                                                                             <div
-                                                                                class="w-4 h-4 rounded-full border-2"
+                                                                                class="w-4 h-4 rounded-xl border-2"
                                                                             ></div>
                                                                         </div>
                                                                     </ng-container>
@@ -294,7 +294,7 @@
                                                                 "
                                                             >
                                                                 <div
-                                                                    class="m-1 py-0.5 px-3 rounded-full text-sm font-medium text-gray-500 bg-slate-100 dark:text-gray-300 dark:bg-gray-700"
+                                                                    class="m-1 py-0.5 px-3 rounded-xl text-sm font-medium text-gray-500 bg-slate-100 dark:text-gray-300 dark:bg-gray-700"
                                                                 >
                                                                     {{
                                                                         label.title
@@ -344,7 +344,7 @@
                                                             class="flex items-end flex-wrap relative"
                                                         >
                                                             <div
-                                                                class="text-purple-400 place-self-end ml-[8px] flex self-end items-end justify-self-end justify-end place-items-end place-content-end content-end text-xl font-semibold"
+                                                                class="text-black dark:text-white place-self-end ml-[8px] flex self-end items-end justify-self-end justify-end place-items-end place-content-end content-end text-xl font-semibold"
                                                             >
                                                                 {{ note.price }}
                                                                 <div
@@ -352,12 +352,12 @@
                                                                 >
                                                                     <img
                                                                         class="w-5 h-5 dark:hidden block"
-                                                                        src="/assets/images/logo/coinb.svg"
+                                                                        src="/assets/images/logo/coinsoran.svg"
                                                                         alt=""
                                                                     />
                                                                     <img
                                                                         class="w-5 h-5 dark:block hidden"
-                                                                        src="/assets/images/logo/coinw.svg"
+                                                                        src="/assets/images/logo/coinsoran.svg"
                                                                         alt=""
                                                                     />
                                                                 </div>
@@ -365,29 +365,50 @@
                                                         </div>
                                                     </ng-container>
 
-                                                    <ng-container>
+                                                    <!-- Users avatars pfps -->
+
+                                                    <ng-container
+                                                        *ngIf="note.archived"
+                                                    >
                                                         <div
                                                             class="w-20 h-20 grid place-items-end absolute flex items-center self-end"
                                                         >
                                                             <img
                                                                 class="w-1/2 h-1/2 rounded-full -mt-40"
                                                                 *ngIf="
-                                                                    user.avatar
+                                                                    note.pfp;
+                                                                    else showAvatar
                                                                 "
+                                                                [src]="note.pfp"
+                                                                alt="User pfp"
+                                                            />
+
+                                                            <ng-template
+                                                                #showAvatar
+                                                            >
+                                                                <img
+                                                                    class="w-1/2 h-1/2 rounded-full -mt-40"
+                                                                    [src]="
+                                                                        user.avatar
+                                                                    "
+                                                                    alt="User avatar"
+                                                                />
+                                                            </ng-template>
+                                                        </div>
+                                                    </ng-container>
+                                                    <ng-container
+                                                        *ngIf="!note.archived"
+                                                    >
+                                                        <div
+                                                            class="w-20 h-20 grid place-items-end absolute flex items-center self-end"
+                                                        >
+                                                            <img
+                                                                class="w-1/2 h-1/2 rounded-full -mt-40"
                                                                 [src]="
                                                                     user.avatar
                                                                 "
                                                                 alt="User avatar"
                                                             />
-                                                            <mat-icon
-                                                                class="icon-size-24"
-                                                                *ngIf="
-                                                                    !user.avatar
-                                                                "
-                                                                [svgIcon]="
-                                                                    'heroicons_solid:user-circle'
-                                                                "
-                                                            ></mat-icon>
                                                         </div>
                                                     </ng-container>
                                                 </div>
