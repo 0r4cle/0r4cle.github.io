@@ -155,14 +155,9 @@
                         class="text-black dark:text-white mr-10 place-self-end grid flex self-end items-end justify-self-end justify-end place-items-end place-content-end content-end text-3xl font-semibold"
                     >
                         {{ note.price }}
-                        <div class="flex grid absolute -mr-7 mb-1.5">
+                        <div class="flex -mr-7 -mt-10 mb-1.5">
                             <img
-                                class="w-6 h-6 dark:hidden block"
-                                src="/assets/images/logo/coinsoran.svg"
-                                alt=""
-                            />
-                            <img
-                                class="w-6 h-6 dark:block hidden"
+                                class="w-6 h-6"
                                 src="/assets/images/logo/coinsoran.svg"
                                 alt=""
                             />
@@ -188,8 +183,10 @@
 
             <!-- Edit Actions -->
             <ng-container *ngIf="note.id">
-                <div class="flex items-center justify-between mt-4">
-                    <div class="flex items-center space-x-2">
+                <div
+                    class="flex items-center justify-between mt-4 sm:ml-0 -ml-3"
+                >
+                    <div class="flex items-center sm:space-x-3 space-x-0">
                         <!-- Image -->
                         <ng-container *ngIf="!note.archived">
                             <div>
@@ -287,6 +284,7 @@
                             <a href="{{ note.image }}" download>
                                 <button>
                                     <mat-icon
+                                        class="mt-1"
                                         [svgIcon]="'heroicons_outline:download'"
                                     ></mat-icon>
                                 </button>
@@ -295,7 +293,7 @@
                     </div>
                     <ng-container *ngIf="!note.archived">
                         <input
-                            class="p-2 text-purple-600 xl:w-40 lg:w-40 md:w-30 sm:w-20 w-20 h-10 font-semibold text-xl bg-purple-200 xl:ml-20 lg:ml-20 md:ml-10 sm:ml-10 ml-4 rounded-full"
+                            class="p-2 text-black xl:w-40 lg:w-40 md:w-30 sm:w-20 w-[54px] h-10 font-semibold text-xl bg-purple-200 xl:ml-20 lg:ml-20 md:ml-10 sm:ml-10 ml-1 rounded-full"
                             [placeholder]="'Price'"
                             [(ngModel)]="note.price"
                             (ngModelChange)="updatePrice()"
@@ -306,7 +304,7 @@
                     <!-- SELL BTN      ///// createCopy(note.id) -->
                     <ng-container *ngIf="!note.archived">
                         <button
-                            class="bg-blue-200 font-medium text-black w-15 h-10 rounded-full"
+                            class="md:bg-blue-200 bg-transparent md:hover:bg-blue-200 hover:bg-hover font-medium text-black w-20 h-10 sm:ml-0 ml-2 rounded-full"
                             (click)="toggleArchiveOnNote(note); updatePfp()"
                         >
                             Sell
@@ -330,7 +328,9 @@
                     </ng-container>
 
                     <!-- Close -->
-                    <button mat-flat-button matDialogClose>Close</button>
+                    <button class="-pl-16" mat-flat-button matDialogClose>
+                        Close
+                    </button>
                 </div>
             </ng-container>
         </div>

@@ -4,7 +4,7 @@
     >
         <!-- Drawer -->
         <mat-drawer
-            class="w-2/3 sm:w-72 lg:w-56 border-r-0 pt-32 xl:bg-transparent xl:dark:bg-transparent lg:bg-transparent lg:dark:bg-transparent md:bg-white md:dark:bg-neurtal-800 sm:bg-white sm:dark:bg-neutral-800 bg-white dark:bg-neutral-800"
+            class="w-2/3 sm:w-72 lg:w-56 border-r-0 pt-32 xl:bg-transparent xl:dark:bg-transparent lg:bg-transparent lg:dark:bg-transparent md:bg-white md:dark:bg-neutral-800 sm:bg-white sm:dark:bg-neutral-800 bg-white dark:bg-zinc-900"
             [mode]="drawerMode"
             [opened]="drawerOpened"
             #drawer
@@ -15,16 +15,21 @@
                 <div class="space-y-2">
                     <!-- Notes -->
                     <div
-                        class="relative flex items-center py-2 px-4 font-medium rounded-xl cursor-pointer 'bg-slate-900/30 text-primary dark:text-primary-400': filterStatus === 'notes', 'text-hint hover:bg-hover': filterStatus !== 'notes' }"
+                        id="mynotes"
+                        class="relative flex items-center py-2 px-4 font-medium rounded-xl cursor-pointer"
                         (click)="resetFilter()"
-                        matRipple
-                        [matRippleDisabled]="filterStatus === 'notes'"
+                        [ngClass]="{
+                            'bg-gray-200 dark:bg-gray-700 text-primary dark:text-primary-400':
+                                filterStatus === 'notes',
+                            'text-hint hover:bg-hover': filterStatus !== 'notes'
+                        }"
                     >
                         <mat-icon
                             class="text-purple-600"
                             [svgIcon]="'heroicons_outline:pencil-alt'"
                         ></mat-icon>
                         <div
+                            id="mynotes"
                             class="ml-3 leading-5 select-none font-semibold text-purple-600"
                         >
                             MyNotes
@@ -118,7 +123,7 @@
                             (click)="drawer.toggle()"
                         >
                             <mat-icon
-                                [svgIcon]="'heroicons_outline:menu'"
+                                [svgIcon]="'heroicons_outline:dots-horizontal'"
                             ></mat-icon>
                         </button>
                         <mat-form-field

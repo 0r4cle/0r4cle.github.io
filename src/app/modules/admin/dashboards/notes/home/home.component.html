@@ -38,18 +38,22 @@
                 secure and easy to use!
             </p>
         </div>
-        <div
-            class="flex place-items-center place-content-center sm:place-content-start md:place-content-start lg:place-content-start xl:place-content-start"
-        >
-            <button
-                class="z-0 justify-center place-items-center place-content-center flex text-center rounded-xl font-semibold dark:text-black text-white dark:bg-neutral-200 bg-slate-900 md:w-30 xl:w-40 xxl:w-40 lg:w-30 lg:h-9 xxl:h-13 xl:h-13 sm:h-13 sm:w-40 md:h-9 w-40 h-13 sm:ml-8 sm:mt-4 mt-6 hover:dark:bg-blue-400"
+        <a href="dashboards/notes">
+            <div
+                class="flex place-items-center place-content-center sm:place-content-start md:place-content-start lg:place-content-start xl:place-content-start"
             >
-                {{ "Take Me There" | transloco }}
-            </button>
-        </div>
+                <button
+                    data-te-ripple-init
+                    data-te-ripple-color="light"
+                    class="z-0 justify-center place-items-center place-content-center flex text-center rounded-xl font-semibold dark:text-black text-white dark:bg-neutral-200 bg-slate-900 md:w-30 xl:w-40 xxl:w-40 lg:w-30 lg:h-9 xxl:h-13 xl:h-13 sm:h-13 sm:w-40 md:h-9 w-40 h-13 sm:ml-8 sm:mt-4 mt-6"
+                >
+                    {{ "Take Me There" | transloco }}
+                </button>
+            </div>
+        </a>
     </div>
     <!-- 4 ROWS -->
-    <a href="dashboards/events">
+    <a href="dashboards/home">
         <div
             class="bg-white dark:bg-zinc-900 relative rounded-2xl flex md:max-w-160 sm:w-110 w-110 md:h-30 xl:h-40 sm:h-40 lg:h-30 h-40 md:ml-0 lg:ml-0 xl:ml-2.5 sm:ml-0"
         >
@@ -148,7 +152,7 @@
             </button>
         </div>
     </div> -->
-    <a href="dashboards/events">
+    <a href="dashboards/home">
         <div
             class="bg-white dark:bg-zinc-900 relative flex rounded-2xl md:max-w-160 sm:w-110 w-110 md:h-30 xl:h-40 sm:h-40 lg:h-30 h-40 md:ml-0 lg:ml-0 xl:ml-2.5 sm:ml-0"
         >
@@ -165,12 +169,12 @@
                 <h2
                     class="text-xl font-semibold dark:text-white text-black mt-2"
                 >
-                    {{ "Events" | transloco }}
+                    {{ " Notes For Sale" | transloco }}
                 </h2>
             </div>
         </div>
     </a>
-    <a href="dashboards/events">
+    <a href="dashboards/home">
         <div
             class="bg-white dark:bg-zinc-900 relative flex rounded-2xl md:max-w-160 sm:w-110 w-110 md:h-30 xl:h-40 sm:h-40 lg:h-30 h-40 md:ml-0 xl:ml-2.5 lg:ml-0 sm:ml-0"
         >
@@ -213,7 +217,7 @@
                     <svg
                         fill="none"
                         stroke="white"
-                        stroke-width="1.5"
+                        stroke-width="1"
                         class="xl:w-12 lg:w-9 md:w-9 sm:w-12 xl:h-12 lg:h-9 md:h-9 sm:h-12 w-12 h-12 flex content-center justify-center self-center items-center flex grid mb-4"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -243,11 +247,13 @@
                     <div
                         class="place-items-center self-center content-center text-center grid"
                     >
-                        <button
-                            class="sm:w-50 rl:max-w-30 xl:w-50 lg:w-40 md:w-40 md:h-7 sm:h-13 shrink xl:h-13 lg:h-7 w-40 h-10 bg-gray-900/70 hover:bg-gray-800/40 font-semibold hover:text-black dark:text-white text-white rounded-xl mb-4"
-                        >
-                            {{ "Add" | transloco }}
-                        </button>
+                        <a href="/dashboards/notes ">
+                            <button
+                                class="sm:w-50 rl:max-w-30 xl:w-50 lg:w-40 md:w-40 md:h-7 sm:h-13 shrink transition-all duration-150 ease-in xl:h-13 lg:h-7 w-40 h-10 bg-gray-900/70 hover:bg-gray-800/40 font-semibold hover:text-black dark:text-white text-white rounded-xl mb-4"
+                            >
+                                {{ "Add" | transloco }}
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -261,6 +267,7 @@
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
+                        stroke-width="1"
                         fill="none"
                         stroke="white"
                         class="xl:w-12 lg:w-9 md:w-9 sm:w-12 xl:h-12 lg:h-9 md:h-9 sm:h-12 w-12 h-12 flex content-center justify-center self-center items-center flex grid mb-4"
@@ -288,11 +295,13 @@
                 <div
                     class="place-items-center self-center content-center text-center grid"
                 >
-                    <button
-                        class="md:w-40 rl:w-30 lg:w-40 lg:h-7 sm:w-50 xl:w-50 sm:h-13 md:h-7 xl:h-13 w-40 h-10 bg-gray-900/70 hover:bg-gray-800/40 text-center place-content-center justify-center self-center place-items-center font-semibold hover:text-black rounded-xl mb-4 dark:text-white text-white"
-                    >
-                        {{ "Look" | transloco }}
-                    </button>
+                    <a href="/dashboards/notes ">
+                        <button
+                            class="md:w-40 rl:w-30 lg:w-40 lg:h-7 sm:w-50 xl:w-50 sm:h-13 md:h-7 xl:h-13 w-40 h-10 bg-gray-900/70 hover:bg-gray-800/40 transition-all duration-150 ease-in text-center place-content-center justify-center self-center place-items-center font-semibold hover:text-black rounded-xl mb-4 dark:text-white text-white"
+                        >
+                            {{ "Look" | transloco }}
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -313,7 +322,7 @@
                             <h1
                                 class="text-xl dark:text-white font-semibold text-black"
                             >
-                                October 2023
+                                {{ "March" | transloco }}
                             </h1>
                             <div
                                 class="flex items-center text-black dark:text-black"
@@ -932,10 +941,10 @@
         </ul>
         <a href="dashboards/pricing">
             <div
-                class="justify-center md:top-0 relative flex content-center items-center place-self-center self-center content-center grid justify-center lg:mt-14 xl:mt-0 md:mt-0 sm:mt-10"
+                class="justify-center md:top-0 relative flex content-center items-center place-self-center self-center content-center grid justify-center lg:mt-14 xl:mt-0 md:mt-0 sm:mt-10 max-w-full"
             >
                 <button
-                    class="bg-slate-900 dark:bg-neutral-300 rounded-xl dark:text-black text-white font-bold justify-center content-center items-center place-self-center self-center content-center justify-center flex grid sm:w-30 md:-mt-12 xl:mt-5 md:w-30 md:h-8 sm:h-9 xl:h-13 lg:h-9 rl:w-50 xl:w-80 lg:w-50 w-50 h-13 mt-5 sm:-mt-0"
+                    class="bg-slate-900 dark:bg-neutral-300 rounded-xl dark:text-black text-white font-bold justify-center content-center items-center place-self-center self-center content-center justify-center flex grid sm:w-30 md:-mt-12 xl:mt-5 md:w-30 md:h-8 sm:h-9 xl:h-13 lg:h-9 rl:w-50 xl:w-90 lg:w-50 w-50 h-13 mt-5 sm:-mt-0"
                 >
                     {{ "Get Coins" | transloco }}
                 </button>

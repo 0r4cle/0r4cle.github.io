@@ -47,14 +47,17 @@ export const labels = [
 export const notes = [
     {
         id: '8f011ac5-b71c-4cd7-a317-857dcd7d85e0',
-        title: '',
+        title: 'ATP',
         content: 'ATP-membrany',
         tasks: null,
         image: 'assets/images/upload/bio2.jpg',
         pfp: 'assets/images/avatars/female-08.jpg',
         reminder: null,
         price: '200',
-        labels: ['6c288794-47eb-4605-8bdf-785b61a449d3'],
+        labels: [
+            '6c288794-47eb-4605-8bdf-785b61a449d3',
+            '8dc11344-3507-48e0-83d6-1c047107f052',
+        ],
         archived: true,
         user_view: false,
         createdAt: moment()
@@ -75,7 +78,10 @@ export const notes = [
         pfp: 'assets/images/avatars/female-05.jpg',
         reminder: null,
         price: '400',
-        labels: ['6c288794-47eb-4605-8bdf-785b61a449d3'],
+        labels: [
+            '6c288794-47eb-4605-8bdf-785b61a449d3',
+            '8dc11344-3507-48e0-83d6-1c047107f052',
+        ],
         archived: true,
         user_view: false,
         createdAt: moment()
@@ -95,8 +101,11 @@ export const notes = [
         pfp: 'assets/images/avatars/male-08.jpg',
         image: 'assets/images/upload/bio.jpg',
         reminder: null,
-        price: '100',
-        labels: ['6c288794-47eb-4605-8bdf-785b61a449d3'],
+        price: '340',
+        labels: [
+            '6c288794-47eb-4605-8bdf-785b61a449d3',
+            '7dc11344-3507-48e0-83d6-1c047107f052',
+        ],
         archived: true,
         user_view: false,
         createdAt: moment()
@@ -113,15 +122,18 @@ export const notes = [
         dislikes: '0',
     },
     {
-        id: '89861bd4-0144-4bb4-8b39-332ca10371d5',
+        id: '89861bd4-0144-4bb4-8b39-332ca1037d5',
         title: '',
-        content: 'Sylabicky vers',
+        content: 'Interpunkcie',
         tasks: null,
         pfp: 'assets/images/avatars/female-06.jpg',
         image: 'assets/images/upload/sjl.JPG',
         reminder: moment().hour(12).minute(34).add(50, 'day').toISOString(),
-        price: '500',
-        labels: ['bbc73458-940b-421c-8d5f-8dcd23a9b0d6'],
+        price: '270',
+        labels: [
+            'e2f749f5-41ed-49d0-a92a-1c83d879e371',
+            '7dc11344-3507-48e0-83d6-1c047107f052',
+        ],
         archived: true,
         user_view: false,
         createdAt: moment()
@@ -136,18 +148,21 @@ export const notes = [
 
     {
         id: 'd46dee8b-8761-4b6d-a1df-449d6e6feb6a',
-        title: '',
-        content: 'y/i',
+        title: 'Pasívny transport a aktívny transport',
+        content: ' transporty',
         tasks: null,
         pfp: 'assets/images/avatars/male-10.jpg',
-        image: 'assets/images/upload/diktat.JPG',
+        image: 'assets/images/upload/bio5.jpg',
         reminder: moment()
             .hour(14)
             .minute(56)
             .subtract(25, 'day')
             .toISOString(),
-        price: '200',
-        labels: ['e2f749f5-41ed-49d0-a92a-1c83d879e371'],
+        price: '210',
+        labels: [
+            '6c288794-47eb-4605-8bdf-785b61a449d3',
+            '0dc11344-3507-48e0-83d6-1c047107f052',
+        ],
         archived: true,
         user_view: false,
         createdAt: moment()
@@ -168,7 +183,10 @@ export const notes = [
         image: 'assets/images/upload/bio5.jpg',
         reminder: null,
         price: '250',
-        labels: ['6c288794-47eb-4605-8bdf-785b61a449d3'],
+        labels: [
+            '6c288794-47eb-4605-8bdf-785b61a449d3',
+            '9dc11344-3507-48e0-83d6-1c047107f052',
+        ],
         archived: true,
         user_view: false,
         createdAt: moment()
@@ -186,14 +204,17 @@ export const notes = [
     },
     {
         id: '15188348-78aa-4ed6-b5c2-028a214ba987',
-        title: '',
-        content: 'Vypocet obvodu',
+        title: 'Akumulatori',
+        content: 'Gal. články, Daniellov článok, zinková anoda',
         tasks: null,
         pfp: 'assets/images/avatars/male-11.jpg',
-        image: 'assets/images/upload/mat.jpg',
+        image: 'assets/images/upload/ch3.jpg',
         reminder: null,
         price: '900',
-        labels: ['e2f749f5-41ed-49d0-a92a-1c83d879e371'],
+        labels: [
+            'e2f749f5-41ed-49d0-a92a-1c83d879e371',
+            '9dc11344-3507-48e0-83d6-1c047107f052',
+        ],
         archived: true,
         user_view: false,
         createdAt: moment()
@@ -208,12 +229,15 @@ export const notes = [
     {
         id: '89861bd4-0144-4bb4-8b39-332ca10371d5',
         title: '',
-        content: 'Kelistaticky feran',
+        content: 'Redoxny dej',
         tasks: null,
         pfp: 'assets/images/avatars/male-13.jpg',
         image: 'assets/images/upload/ch2.jpg',
         reminder: moment().hour(12).minute(34).add(50, 'day').toISOString(),
-        labels: ['bbc73458-940b-421c-8d5f-8dcd23a9b0d6'],
+        labels: [
+            'bbc73458-940b-421c-8d5f-8dcd23a9b0d6',
+            '8dc11344-3507-48e0-83d6-1c047107f052',
+        ],
         archived: true,
         user_view: false,
         price: '450',
@@ -227,13 +251,16 @@ export const notes = [
     {
         id: '8b7ac1940-08ae-4adc-9164-1eba02f710b0',
         title: '',
-        content: 'Precvicovanie',
+        content: 'Precvičovanie',
         tasks: null,
         pfp: 'assets/images/avatars/female-12.jpg',
         image: 'assets/images/upload/sjl.JPG',
         reminder: moment().hour(12).minute(34).add(50, 'day').toISOString(),
         price: '670',
-        labels: ['bbc73458-940b-421c-8d5f-8dcd23a9b0d6'],
+        labels: [
+            'e2f749f5-41ed-49d0-a92a-1c83d879e371',
+            '7dc11344-3507-48e0-83d6-1c047107f052',
+        ],
         archived: true,
         user_view: false,
         createdAt: moment()
@@ -252,7 +279,10 @@ export const notes = [
         image: 'assets/images/upload/ch2.jpg',
         reminder: moment().hour(12).minute(34).add(50, 'day').toISOString(),
         price: '200',
-        labels: ['bbc73458-940b-421c-8d5f-8dcd23a9b0d6'],
+        labels: [
+            'bbc73458-940b-421c-8d5f-8dcd23a9b0d6',
+            '8dc11344-3507-48e0-83d6-1c047107f052',
+        ],
         archived: true,
         user_view: false,
         createdAt: moment()
@@ -271,7 +301,10 @@ export const notes = [
         pfp: 'assets/images/avatars/male-16.jpg',
         image: 'assets/images/upload/ch3.jpg',
         reminder: moment().hour(13).minute(43).subtract(2, 'day').toISOString(),
-        labels: ['bbc73458-940b-421c-8d5f-8dcd23a9b0d6'],
+        labels: [
+            'bbc73458-940b-421c-8d5f-8dcd23a9b0d6',
+            '8dc11344-3507-48e0-83d6-1c047107f052',
+        ],
         archived: true,
         user_view: false,
         price: '430',
@@ -291,7 +324,10 @@ export const notes = [
         image: 'assets/images/upload/ch.jpg',
         reminder: null,
         price: '200',
-        labels: ['6c288794-47eb-4605-8bdf-785b61a449d3'],
+        labels: [
+            '8dc11344-3507-48e0-83d6-1c047107f052',
+            '2dc11344-3507-48e0-83d6-1c047107f052',
+        ],
         archived: true,
         user_view: false,
         createdAt: moment().hour(7).minute(12).subtract(2, 'day').toISOString(),

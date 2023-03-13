@@ -3,6 +3,7 @@ import { navigating } from '@syncfusion/ej2-angular-schedule';
 import { user as userData } from 'app/mock-api/common/user/data';
 import { User } from 'app/core/user/user.types';
 import { UserService } from 'app/core/user/user.service';
+import { NotesService } from 'app/modules/admin/dashboards/notes/notes/notes.service';
 
 @Component({
     selector: 'home',
@@ -14,6 +15,7 @@ export class HomeComponent {
     private startDate: Date;
     public days: number;
     private _user: any = userData;
+    private _notesService: NotesService;
     user: User;
 
     // STREAK
@@ -54,13 +56,13 @@ export class HomeComponent {
         if (this.coinscount == userData.coins) {
             clearInterval(this.coinscountstop);
         }
-    }, 1);
+    }, 0.01);
 
     eventscount: number = 0;
 
     eventscountstop: any = setInterval(() => {
         this.eventscount++;
-        if (this.eventscount == 5) {
+        if (this.eventscount == 12) {
             clearInterval(this.eventscountstop);
         }
     }, 100);

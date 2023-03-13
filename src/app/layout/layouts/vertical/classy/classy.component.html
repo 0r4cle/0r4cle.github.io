@@ -184,12 +184,9 @@
             class="flex flex-col items-center w-full p-4 visible md:-mt-40 sm:-mt-50 md:invisible sm:invisible xl:invisible lg:invisible"
         >
             <div class="relative right-18 top-15 w-24 h-24">
-                <img
-                    class="w-1/2 h-1/2 rounded-full"
-                    *ngIf="user.avatar"
-                    [src]="user.avatar"
-                    alt="User avatar"
-                />
+                <user class="w-1/2 h-1/2 rounded-full">
+                    [showAvatar]="true" ></user
+                >
                 <mat-icon
                     class="icon-size-24"
                     *ngIf="!user.avatar"
@@ -213,67 +210,74 @@
     <!-- Navigation footer hook -->
     <ng-container fuseVerticalNavigationContentFooter>
         <div
-            class="flex flex-0 items-center justify-center pr-6 pl-2 mt-2 mb-4 xxl:mt-80 xl:mt-40 opacity-12"
+            class="flex flex-0 items-center justify-center pr-6 pl-2 mt-2 mb-4 xxl:mt-80 xl:mt-30 opacity-12"
         ></div>
         <div
-            class="flex flex-col items-center place-items-center self-center mr-5 md:h-40 sm:h-40 lg:h-40 h-13 w-67 md:w-60 sm:w-60 lg:w-60 ml-5 justify-center sm:mt-10 md:mt-10 lg:mt-10 xl:mt-10 md:drop-shadow-xl justify-center sm:rounded-2xl rounded-xl md:rounded-2xl overflow-hidden bg-slate-900 dark:bg-neutral-600 dark:border-none sm:border-solid md:border-solid md:border-2 border-none sm:border-2 border-gray-200"
+            class="fixed xxl:bottom-50 xl:bottom-40 flex mt-2 mb-4 xxl:mt-80 xl:mt-30"
         >
             <div
-                class="text-white sm:visible invisible md:visible text-center font-bold flex"
+                class="flex flex-col items-center place-items-center self-center mr-5 md:h-40 sm:h-40 lg:h-40 h-13 w-60 md:w-60 sm:w-60 lg:w-60 ml-5 justify-center sm:mt-10 md:mt-10 lg:mt-10 xl:mt-10 md:drop-shadow-xl justify-center sm:rounded-2xl rounded-xl md:rounded-2xl overflow-hidden bg-slate-900 dark:bg-neutral-600 dark:border-none sm:border-solid md:border-solid md:border-2 border-none sm:border-2 border-gray-200"
             >
-                Need Help?
-            </div>
-            <div
-                class="text-white sm:visible invisible md:visible text-center font-bold flex"
-            >
-                Feel Free To Contact
-            </div>
-            <a
-                href="dashboards/help-center"
-                class="text-white text-center sm:invisible visible md:invisible font-semibold xl:font-bold"
-            >
-                Support
-            </a>
-            <a
-                class="text-center underline sm:visible invisible md:visible text-blue-400 rounded-2xl sm:bg-transparent md:transparent flex font-medium mt-5"
-                href="dashboards/help-center"
-                >Get Support</a
-            >
+                <div
+                    class="text-white sm:visible invisible md:visible text-center font-bold flex"
+                >
+                    Need Help?
+                </div>
+                <div
+                    class="text-white sm:visible invisible md:visible text-center font-bold flex"
+                >
+                    Feel Free To Contact
+                </div>
+                <a
+                    href="dashboards/help-center"
+                    class="text-white text-center sm:invisible visible md:invisible font-semibold xl:font-bold"
+                >
+                    Support
+                </a>
+                <a
+                    class="text-center underline sm:visible invisible md:visible text-blue-400 rounded-2xl sm:bg-transparent md:transparent flex font-medium mt-5"
+                    href="dashboards/help-center"
+                    >Get Support</a
+                >
 
-            <!-- <div
+                <!-- <div
                 class="flex text-2xl font-semibold leading-tight text-center mt-6 ng-star-inserted"
             ></div>
             <div
                 class="flex items-center justify-center p-5 ng-star-inserted"
             ></div> -->
-        </div>
-
-        <div
-            class="flex flex-col items-center p-4 xl:-mt-1 md:-mt-10 sm: lg: invisible sm:visible xl:visible lg:visible md:visible"
-        >
-            <div class="relative w-24 h-24">
-                <user class="flex flex-col items-center w-1/2 p-4 my-26 -mx-20">
-                    [showAvatar]="true" ></user
-                >
-
-                <mat-icon
-                    class="icon-size-24"
-                    *ngIf="!user.avatar"
-                    [svgIcon]="'heroicons_solid:user-circle'"
-                ></mat-icon>
             </div>
+        </div>
+        <div class="fixed bottom-0 w-full flex mt-2 mb-4 xxl:mt-80 xl:mt-30">
             <div
-                class="flex flex-col items-center justify-center w-full ml-30 mt-6"
+                class="flex flex-col items-center p-4 xl:-mt-1 md:-mt-10 sm: lg: invisible sm:visible xl:visible lg:visible md:visible max-h-full"
             >
-                <div
-                    class="w-full whitespace-nowrap text-ellipsis dark:text-white text-black overflow-hidden leading-normal font-medium"
-                >
-                    {{ user.name }}
+                <div class="relative w-24 h-24">
+                    <user
+                        class="flex flex-col items-center w-1/2 p-4 my-26 -mx-20"
+                    >
+                        [showAvatar]="true" ></user
+                    >
+
+                    <mat-icon
+                        class="icon-size-24"
+                        *ngIf="!user.avatar"
+                        [svgIcon]="'heroicons_solid:user-circle'"
+                    ></mat-icon>
                 </div>
                 <div
-                    class="w-full mt-0.5 whitespace-nowrap text-ellipsis overflow-hidden text-md leading-normal font-medium text-secondary"
+                    class="flex flex-col items-center justify-center w-full ml-30 mt-6"
                 >
-                    {{ user.email }}
+                    <div
+                        class="w-full whitespace-nowrap text-ellipsis dark:text-white text-black overflow-hidden leading-normal font-medium"
+                    >
+                        {{ user.name }}
+                    </div>
+                    <div
+                        class="w-full mt-0.5 whitespace-nowrap text-ellipsis overflow-hidden text-md leading-normal font-medium text-secondary"
+                    >
+                        {{ user.email }}
+                    </div>
                 </div>
             </div>
         </div>

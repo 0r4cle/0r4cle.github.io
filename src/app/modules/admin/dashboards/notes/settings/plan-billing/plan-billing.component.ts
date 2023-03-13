@@ -44,20 +44,20 @@ export class SettingsPlanBillingComponent implements OnInit {
         this.plans = [
             {
                 value: 'basic',
-                label: 'BASIC',
+                label: 'Individual',
                 details: 'Starter plan for individuals.',
-                price: '1',
+                price: '',
             },
             {
                 value: 'team',
-                label: 'TEAM',
-                details: 'Buy mroe notes.',
+                label: 'Popular',
+                details: 'Buy more notes.',
                 price: '5',
             },
             {
                 value: 'enterprise',
                 label: 'Trios',
-                details: 'For tripple notes.',
+                details: 'For tripple the notes.',
                 price: '3',
             },
         ];
