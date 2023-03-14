@@ -128,10 +128,16 @@ export class NotesListComponent implements OnInit, OnDestroy {
                 // Filter by label
                 if (filter.startsWith('label:')) {
                     const labelId = filter.split(':')[1];
-                    filteredNotes = filteredNotes.filter(
-                        (note) =>
-                            !!note.labels.find((item) => item.id === labelId)
-                    );
+                    filteredNotes = filteredNotes.filter((note) => {
+                        const isArchive = filter === 'archived';
+                        const hasLabel = note.labels
+                            ? note.labels.some((item) => item.id === labelId)
+                            : false;
+                        return (
+                            (isArchive && note.archived && hasLabel) ||
+                            (!isArchive && !note.archived && hasLabel)
+                        );
+                    });
                 }
 
                 return filteredNotes;
@@ -192,6 +198,7 @@ export class NotesListComponent implements OnInit, OnDestroy {
     addNewNote(): void {
         this._matDialog.open(NotesDetailsComponent, {
             autoFocus: false,
+
             data: {
                 note: {},
             },

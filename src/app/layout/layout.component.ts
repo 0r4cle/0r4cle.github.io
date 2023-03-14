@@ -54,8 +54,8 @@ export class LayoutComponent implements OnInit, OnDestroy {
         combineLatest([
             this._fuseConfigService.config$,
             this._fuseMediaWatcherService.onMediaQueryChange$([
-                '(prefers-color-scheme: dark)',
                 '(prefers-color-scheme: light)',
+                '(prefers-color-scheme: dark)',
             ]),
         ])
             .pipe(
@@ -68,12 +68,12 @@ export class LayoutComponent implements OnInit, OnDestroy {
 
                     // If the scheme is set to 'auto'...
                     if (config.scheme === 'auto') {
-                        // Decide the scheme using the media query
+                        // Decide the scheme using the media query       dark/light
                         options.scheme = mql.breakpoints[
                             '(prefers-color-scheme: dark)'
                         ]
-                            ? 'dark'
-                            : 'light';
+                            ? 'light'
+                            : 'dark';
                     }
 
                     return options;

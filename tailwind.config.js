@@ -295,7 +295,7 @@ const config = {
         verticalAlign: false,
     },
     plugins: [
-        // Fuse - Tailwind plugins
+        // Amos - Tailwind plugins
         require(path.resolve(
             __dirname,
             "src/@fuse/tailwind/plugins/utilities"

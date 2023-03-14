@@ -139,6 +139,7 @@
                                 {{ label.title }}
                             </div>
                             <mat-icon
+                                *ngIf="!note.archived"
                                 class="ml-1 icon-size-4 cursor-pointer"
                                 [svgIcon]="'heroicons_solid:x-circle'"
                                 (click)="toggleLabelOnNote(note, label)"
