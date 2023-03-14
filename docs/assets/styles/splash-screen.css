@@ -9,7 +9,7 @@ body fuse-splash-screen {
     right: 0;
     bottom: 0;
     background-color: #000000;
-    color: #f9fafb;
+    color: #2b71b6;
     z-index: 999999;
     pointer-events: none;
     opacity: 1;

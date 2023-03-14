@@ -70,7 +70,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
                     if (config.scheme === 'auto') {
                         // Decide the scheme using the media query
                         options.scheme = mql.breakpoints[
-                            '(prefers-color-scheme: light)'
+                            '(prefers-color-scheme: dark)'
                         ]
                             ? 'dark'
                             : 'light';

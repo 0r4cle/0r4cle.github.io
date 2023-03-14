@@ -23,12 +23,7 @@
         <link
             rel="icon"
             type="image/x-icon"
-            href="assets/images/flags/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/x-icon"
-            href="assets/images/flags/favicon-32x32.png"
+            href="assets/images/logo/favi.svg"
         />
 
         <!-- Fonts -->
@@ -52,17 +47,22 @@
 
     <body>
         <!-- Splash screen -->
-        <fuse-splash-screen class="bg-white dark:bg-neutral-900">
-            <img
-                class="w-15 h-15 dark:block hidden"
-                src="assets/images/logo/bcpl.svg"
-                alt="Amos logo"
-            />
-            <img
-                class="w-15 h-15 dark:hidden block"
-                src="assets/images/logo/dcpl.svg"
-                alt="Amos logo"
-            />
+        <fuse-splash-screen>
+            <div class="dark:hidden block ">
+                <img
+                    class="s w-15 h-15"
+                    src="assets/images/logo/favi.svg"
+                    alt="Amos logo w"
+                />
+            </div>
+            <div class="dark:block hidden ">
+                <img
+                    class="c w-15 h-15"
+                    
+                    src="assets/images/logo/bcpl.svg"
+                    alt="Amos logo b"
+                />
+            </div>
             <div class="spinner">
                 <div class="bounce1"></div>
                 <div class="bounce2"></div>
