@@ -394,6 +394,41 @@ export class NotesDetailsComponent implements OnInit, OnDestroy {
         console.log(notesData);
         return noteToCopy;
     }
+    checkBalanceSufficient(noteId: string) {
+        const note = notesData.find((note) => note.id === noteId);
+        const price = parseInt(note.price);
+
+        if (price > user.coins) {
+            const image = document.getElementById(noteId + '-image');
+            image.classList.add('blur-sm');
+        }
+    }
+
+    deactivateButtonIfBalanceIsInsufficient(id: string) {
+        const note = notesData.find((note) => note.id === id);
+        const price = parseInt(note.price);
+
+        if (price > user.coins) {
+            const button = document.getElementById(
+                'buyButton'
+            ) as HTMLButtonElement;
+
+            button.disabled = true;
+
+            const image = document.getElementById('blurr');
+            image.classList.add('blur-[3px]');
+        } else {
+            const button = document.getElementById(
+                'buyButton'
+            ) as HTMLButtonElement;
+
+            button.disabled = false;
+        }
+    }
+
+    ngAfterViewInit() {
+        this.deactivateButtonIfBalanceIsInsufficient(this.note.id);
+    }
 
     //  COINS
     subtractNotePriceFromUserCoins(id: string) {
@@ -413,9 +448,6 @@ export class NotesDetailsComponent implements OnInit, OnDestroy {
             //     `Subtracted ${price} coins from user's balance. New balance: ${user.coins}`
             // );
         } else {
-            console.log(
-                `User's balance is not sufficient to buy the note. Note price: ${price}. User's balance: ${user.coins}`
-            );
         }
     }
 

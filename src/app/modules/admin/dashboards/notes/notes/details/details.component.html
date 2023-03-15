@@ -7,7 +7,7 @@
         <ng-container *ngIf="note.image">
             <div
                 oncontextmenu="return false"
-                id="pixel"
+                id="blurr"
                 class="relative w-full"
             >
                 <div class="absolute right-0 bottom-0 p-4">
@@ -318,6 +318,7 @@
                     <!-- BUY BTN -->
                     <ng-container *ngIf="note.archived">
                         <button
+                            id="buyButton"
                             class="bg-purple-200 dark:text-black text-black font-medium hover:bg-purple-100 hover:ease-in duration-300 w-18 h-10 xl:ml-100 lg:ml-100 md:ml-100 sm:ml-60 ml-40 rounded-full"
                             (click)="
                                 toggleArchiveOnNote(note);
