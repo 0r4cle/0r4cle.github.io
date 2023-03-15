@@ -44,6 +44,7 @@ export class NotesListComponent implements OnInit, OnDestroy {
     filter$: BehaviorSubject<string> = new BehaviorSubject('archived');
     searchQuery$: BehaviorSubject<string> = new BehaviorSubject(null);
     masonryColumns: number = 4;
+    note: Note;
 
     private _unsubscribeAll: Subject<any> = new Subject<any>();
 
