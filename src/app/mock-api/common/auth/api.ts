@@ -55,7 +55,7 @@ export class AuthMockApi {
             .reply(({ request }) => {
                 // Sign in successful
                 if (
-                    request.body.email === 'hughes.brian@company.com' &&
+                    request.body.email === 'samuel.zima@company.com' &&
                     request.body.password === 'admin'
                 ) {
                     return [
