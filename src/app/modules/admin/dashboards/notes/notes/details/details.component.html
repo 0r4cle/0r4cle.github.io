@@ -5,11 +5,7 @@
     <ng-container *ngIf="note$ | async as note">
         <!-- Image -->
         <ng-container *ngIf="note.image">
-            <div
-                oncontextmenu="return false"
-                id="blurr"
-                class="relative w-full"
-            >
+            <div oncontextmenu="return false" id="xxx" class="relative w-full">
                 <div class="absolute right-0 bottom-0 p-4">
                     <ng-container *ngIf="!note.archived">
                         <button mat-icon-button (click)="removeImage(note)">

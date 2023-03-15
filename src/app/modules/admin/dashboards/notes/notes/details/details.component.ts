@@ -416,7 +416,7 @@ export class NotesDetailsComponent implements OnInit, OnDestroy {
             button.disabled = true;
 
             const image = document.getElementById('blurr');
-            image.classList.add('blur-[3px]');
+            image.classList.add('backdrop-blur-xl');
         } else {
             const button = document.getElementById(
                 'buyButton'
