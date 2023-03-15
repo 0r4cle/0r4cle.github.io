@@ -92,7 +92,7 @@
             <div class="flex items-baseline mt-0.5 font-medium">
                 <div>Don't have an account?</div>
                 <a
-                    class="ml-1 text-blue-400 hover:underline"
+                    class="ml-1 text-[#376DED] hover:underline"
                     [routerLink]="['/sign-up']"
                     >Sign up
                 </a>
@@ -173,7 +173,7 @@
                         Remember me
                     </mat-checkbox>
                     <a
-                        class="text-md font-medium text-blue-400 hover:underline"
+                        class="text-md font-medium text-[#376DED] hover:underline"
                         [routerLink]="['/forgot-password']"
                         >Forgot password?
                     </a>
@@ -181,7 +181,7 @@
 
                 <!-- Submit button -->
                 <button
-                    class="fuse-mat-button-large rounded-xl w-full mt-6 bg-blue-400"
+                    class="fuse-mat-button-large rounded-xl w-full mt-6 bg-[#376DED]"
                     mat-flat-button
                     [color]="'Primary'"
                     [disabled]="signInForm.disabled"
@@ -232,34 +232,31 @@
         </div>
     </div>
     <div
-        class="relative hidden md:flex bottom-0 flex-auto items-center justify-center h-full p-0 overflow-hidden bg-white dark:bg-neutral-900"
+        class="relative hidden md:flex z-10 bottom-0 flex-auto items-center justify-center h-full p-0 overflow-hidden bg-white dark:bg-neutral-900"
     >
         <!-- Background - @formatter:off -->
         <!-- Rings -->
 
         <!-- h-full =width not moving -->
+
         <img
             class="ml-[360px] mx-auto flex justify-end grid place-items-end items-end w-full h-full object-cover"
             src="/assets/images/logo/logg.svg"
         />
+
         <!-- @formatter:on -->
         <!-- Content -->
-        <!-- <div class="z-10 absolute w-full max-w-2xl mt-180">
-            <div class="text-4xl font-bold leading-none text-white">
-                <div
-                    class="bg-white/20 w-200 h-40 rounded-3xl backdrop-blur-lg p-12"
-                >
-                    „Hľadajme spôsob, aby učitelia menej učili a žiaci viac
-                    pochopili.“
+        <div class="absolute flex bottom-20 dark:text-white text-[#362B6E]">
+            <div class="p-12 text-2xl leading-none">
+                <div class="h-full font-bold">
+                    "Hľadajme spôsob, aby učitelia menej učili <br />
+                    a žiaci viac pochopili.“
                 </div>
 
-                <div
-                    class="text-2xl p-2 m-3 font-semibold leading-none text-white"
-                >
-                    <p class="text-[70px] relative">“</p>
-                    Jan Amos Komenský
+                <div class="text-xl mt-2 font-semibold italic leading-none">
+                    - Jan Amos Komenský
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 </div>

@@ -3,7 +3,7 @@
 
 <!-- Navigation -->
 <fuse-vertical-navigation
-    class="dark:bg-zinc-900 bg-white print:hidden h-full"
+    class="dark:bg-zinc-900 bg-white print:hidden"
     [mode]="isScreenSmall ? 'over' : 'side'"
     [name]="'mainNavigation'"
     [navigation]="navigation.default"
@@ -12,12 +12,12 @@
     <!-- Navigation header hook -->
     <ng-container fuseVerticalNavigationContentHeader>
         <div
-            class="flex items-center w-full sm:p-9 md:pl-9 sm:pt-18 md:pt-3 xl:pt-7 lg:pt-10 sm:pl-10 md:pl-10"
+            class="flex items-center w-full sm:p-9 xxl:mt-20 xl:mt-10 md:pl-9 sm:pt-18 md:pt-3 xl:pt-7 lg:pt-10 sm:pl-10 md:pl-10"
         >
             <!-- Logo -->
             <a href="dashboards/home">
                 <div
-                    class="text-center w-50 absolute items-center xxl:-mt-12 xl:-mt-12 lg:-mt-14 md:-mt-10 sm:-mt-22 ml-6 justify-center text-4xl font-bold dark:text-white text-slate-900 md:visible sm:visible invisible"
+                    class="text-center w-50 absolute items-center xxl:-mt-20 xl:-mt-12 lg:-mt-5 md:-mt-1 sm:-mt-12 ml-6 justify-center text-4xl font-bold dark:text-white text-slate-900 md:visible sm:visible invisible"
                 >
                     <!-- BLACK -->
                     <svg
@@ -59,7 +59,7 @@
                     <svg
                         class="block dark:hidden"
                         width="150"
-                        height="150"
+                        height="60"
                         viewBox="0 0 514 150"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
