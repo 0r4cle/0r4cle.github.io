@@ -55,6 +55,8 @@ export class HomeComponent {
         this.coinscount++;
         if (this.coinscount == userData.coins) {
             clearInterval(this.coinscountstop);
+        } else if (userData.coins == 0) {
+            this.coinscount--;
         }
     }, 0.01);
 
