@@ -60,9 +60,9 @@ export class SettingsComponent implements OnInit, OnDestroy {
             {
                 id: 'plan-billing',
                 icon: 'heroicons_outline:credit-card',
-                title: 'Plan & Billing',
+                title: 'Billing',
                 description:
-                    'Manage your subscription plan, payment method and billing information',
+                    'Manage your payment method and billing information',
             },
             // {
             //     id         : 'notifications',
