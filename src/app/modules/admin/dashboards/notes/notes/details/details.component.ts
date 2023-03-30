@@ -4,10 +4,12 @@ import {
     Component,
     Inject,
     OnDestroy,
+    HostListener,
     OnInit,
     ViewEncapsulation,
 } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+
 import {
     debounceTime,
     map,
@@ -46,6 +48,23 @@ export class NotesDetailsComponent implements OnInit, OnDestroy {
     noteChanged: Subject<Note> = new Subject<Note>();
     private _unsubscribeAll: Subject<any> = new Subject<any>();
     note: Note; // add the note property to the component
+
+    scrollToPosition(x: number, y: number): void {
+        window.scrollTo(x, y);
+    }
+
+    onScroll(): void {
+        const myDiv = document.getElementById('my-div');
+        const scrollDownText = document.getElementById('scroll');
+
+        myDiv.addEventListener('scroll', () => {
+            if (myDiv.scrollTop > 0) {
+                scrollDownText.classList.add('hidden');
+            } else {
+                scrollDownText.classList.remove('hidden');
+            }
+        });
+    }
 
     // LIKE DISLIKE
     likes = 0;
