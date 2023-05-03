@@ -20,14 +20,14 @@
                 class="mt-8 sm:mt-12 p-6 pb-7 sm:p-10 sm:pb-7 shadow rounded-2xl bg-card"
             >
                 <!-- Alert -->
-                <fuse-alert
+                <amos-alert
                     class="mb-8"
                     *ngIf="alert"
                     [type]="alert.type"
                     [showIcon]="false"
                 >
                     {{ alert.message }}
-                </fuse-alert>
+                </amos-alert>
                 <form
                     class="space-y-3"
                     [formGroup]="supportForm"
@@ -95,7 +95,7 @@
                         </mat-error>
                     </mat-form-field>
                     <!-- Message -->
-                    <mat-form-field class="fuse-mat-textarea w-full">
+                    <mat-form-field class="amos-mat-textarea w-full">
                         <textarea
                             matInput
                             [formControlName]="'message'"

@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 import { Subject, takeUntil } from 'rxjs';
-import { FuseMediaWatcherService } from '@fuse/services/media-watcher';
+import { amosMediaWatcherService } from '@amos/services/media-watcher';
 
 @Component({
     selector: 'settings',
@@ -30,7 +30,7 @@ export class SettingsComponent implements OnInit, OnDestroy {
      */
     constructor(
         private _changeDetectorRef: ChangeDetectorRef,
-        private _fuseMediaWatcherService: FuseMediaWatcherService
+        private _amosMediaWatcherService: amosMediaWatcherService
     ) {}
 
     // -----------------------------------------------------------------------------------------------------
@@ -79,7 +79,7 @@ export class SettingsComponent implements OnInit, OnDestroy {
         ];
 
         // Subscribe to media changes
-        this._fuseMediaWatcherService.onMediaChange$
+        this._amosMediaWatcherService.onMediaChange$
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe(({ matchingAliases }) => {
                 // Set the drawerMode and drawerOpened

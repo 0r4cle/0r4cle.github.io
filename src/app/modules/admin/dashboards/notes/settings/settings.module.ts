@@ -8,7 +8,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { FuseAlertModule } from '@fuse/components/alert';
+import { amosAlertModule } from '@amos/components/alert';
 import { SharedModule } from 'app/shared/shared.module';
 import { SettingsComponent } from 'app/modules/admin/dashboards/notes/settings/settings.component';
 import { SettingsAccountComponent } from 'app/modules/admin/dashboards/notes/settings/account/account.component';
@@ -37,7 +37,7 @@ import { settingsRoutes } from 'app/modules/admin/dashboards/notes/settings/sett
         MatSelectModule,
         MatSidenavModule,
         MatSlideToggleModule,
-        FuseAlertModule,
+        amosAlertModule,
         SharedModule,
     ],
 })

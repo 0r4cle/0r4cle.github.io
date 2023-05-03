@@ -1,17 +1,26 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
+    Component,
+    OnDestroy,
+    OnInit,
+    ViewEncapsulation,
+} from '@angular/core';
 import { take } from 'rxjs';
 import { AvailableLangs, TranslocoService } from '@ngneat/transloco';
-import { FuseNavigationService, FuseVerticalNavigationComponent } from '@fuse/components/navigation';
+import {
+    amosNavigationService,
+    amosVerticalNavigationComponent,
+} from '@amos/components/navigation';
 
 @Component({
-    selector       : 'languages',
-    templateUrl    : './languages.component.html',
-    encapsulation  : ViewEncapsulation.None,
+    selector: 'languages',
+    templateUrl: './languages.component.html',
+    encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    exportAs       : 'languages'
+    exportAs: 'languages',
 })
-export class LanguagesComponent implements OnInit, OnDestroy
-{
+export class LanguagesComponent implements OnInit, OnDestroy {
     availableLangs: AvailableLangs;
     activeLang: string;
     flagCodes: any;
@@ -21,11 +30,9 @@ export class LanguagesComponent implements OnInit, OnDestroy
      */
     constructor(
         private _changeDetectorRef: ChangeDetectorRef,
-        private _fuseNavigationService: FuseNavigationService,
+        private _amosNavigationService: amosNavigationService,
         private _translocoService: TranslocoService
-    )
-    {
-    }
+    ) {}
 
     // -----------------------------------------------------------------------------------------------------
     // @ Lifecycle hooks
@@ -34,35 +41,30 @@ export class LanguagesComponent implements OnInit, OnDestroy
     /**
      * On init
      */
-    ngOnInit(): void
-    {
-        // Get the available languages from transloco
+    ngOnInit(): void {
+      
         this.availableLangs = this._translocoService.getAvailableLangs();
 
-        // Subscribe to language changes
+        
         this._translocoService.langChanges$.subscribe((activeLang) => {
-
-            // Get the active lang
+          
             this.activeLang = activeLang;
 
-            // Update the navigation
+          
             this._updateNavigation(activeLang);
         });
 
-        // Set the country iso codes for languages for flags
+     
         this.flagCodes = {
-            'en': 'us',
-            'tr': 'tr',
-            'sk': 'sk'
+            en: 'us',
+            sk: 'sk',
         };
     }
 
     /**
      * On destroy
      */
-    ngOnDestroy(): void
-    {
-    }
+    ngOnDestroy(): void {}
 
     // -----------------------------------------------------------------------------------------------------
     // @ Public methods
@@ -73,8 +75,7 @@ export class LanguagesComponent implements OnInit, OnDestroy
      *
      * @param lang
      */
-    setActiveLang(lang: string): void
-    {
+    setActiveLang(lang: string): void {
         // Set the active lang
         this._translocoService.setActiveLang(lang);
     }
@@ -85,8 +86,7 @@ export class LanguagesComponent implements OnInit, OnDestroy
      * @param index
      * @param item
      */
-    trackByFn(index: number, item: any): any
-    {
+    trackByFn(index: number, item: any): any {
         return item.id || index;
     }
 
@@ -100,8 +100,7 @@ export class LanguagesComponent implements OnInit, OnDestroy
      * @param lang
      * @private
      */
-    private _updateNavigation(lang: string): void
-    {
+    private _updateNavigation(lang: string): void {
         // For the demonstration purposes, we will only update the Dashboard names
         // from the navigation but you can do a full swap and change the entire
         // navigation data.
@@ -110,11 +109,13 @@ export class LanguagesComponent implements OnInit, OnDestroy
         // it's up to you.
 
         // Get the component -> navigation data -> item
-        const navComponent = this._fuseNavigationService.getComponent<FuseVerticalNavigationComponent>('mainNavigation');
+        const navComponent =
+            this._amosNavigationService.getComponent<amosVerticalNavigationComponent>(
+                'mainNavigation'
+            );
 
         // Return if the navigation component does not exist
-        if ( !navComponent )
-        {
+        if (!navComponent) {
             return null;
         }
 
@@ -122,12 +123,15 @@ export class LanguagesComponent implements OnInit, OnDestroy
         const navigation = navComponent.navigation;
 
         // Get the home dashboard item and update its title
-        const homeDashboardItem = this._fuseNavigationService.getItem('dashboards.home', navigation);
-        if ( homeDashboardItem )
-        {
-            this._translocoService.selectTranslate('Home').pipe(take(1))
+        const homeDashboardItem = this._amosNavigationService.getItem(
+            'dashboards.home',
+            navigation
+        );
+        if (homeDashboardItem) {
+            this._translocoService
+                .selectTranslate('Home')
+                .pipe(take(1))
                 .subscribe((translation) => {
-
                     // Set the title
                     homeDashboardItem.title = translation;
 
@@ -137,12 +141,15 @@ export class LanguagesComponent implements OnInit, OnDestroy
         }
 
         // Get the Analytics dashboard item and update its title
-        const notesDashboardItem = this._fuseNavigationService.getItem('dashboards.notes', navigation);
-        if ( notesDashboardItem )
-        {
-            this._translocoService.selectTranslate('Notes').pipe(take(1))
+        const notesDashboardItem = this._amosNavigationService.getItem(
+            'dashboards.notes',
+            navigation
+        );
+        if (notesDashboardItem) {
+            this._translocoService
+                .selectTranslate('Notes')
+                .pipe(take(1))
                 .subscribe((translation) => {
-
                     // Set the title
                     notesDashboardItem.title = translation;
 
@@ -151,12 +158,15 @@ export class LanguagesComponent implements OnInit, OnDestroy
                 });
         }
 
-        const eventsDashboardItem = this._fuseNavigationService.getItem('dashboards.events', navigation);
-        if ( eventsDashboardItem )
-        {
-            this._translocoService.selectTranslate('Events').pipe(take(1))
+        const eventsDashboardItem = this._amosNavigationService.getItem(
+            'dashboards.events',
+            navigation
+        );
+        if (eventsDashboardItem) {
+            this._translocoService
+                .selectTranslate('Events')
+                .pipe(take(1))
                 .subscribe((translation) => {
-
                     // Set the title
                     eventsDashboardItem.title = translation;
 

@@ -1,0 +1,110 @@
+/* Variables */
+:root {
+    --amos-vertical-navigation-compact-width: 112px;
+}
+
+amos-vertical-navigation {
+    /* Compact appearance overrides */
+    &.amos-vertical-navigation-appearance-compact {
+        width: var(--amos-vertical-navigation-compact-width);
+        min-width: var(--amos-vertical-navigation-compact-width);
+        max-width: var(--amos-vertical-navigation-compact-width);
+
+        /* Left positioned */
+        &.amos-vertical-navigation-position-left {
+            /* Side mode */
+            &.amos-vertical-navigation-mode-side {
+                margin-left: calc(
+                    var(--amos-vertical-navigation-compact-width) * -1
+                );
+            }
+
+            /* Opened */
+            &.amos-vertical-navigation-opened {
+                margin-left: 0;
+            }
+        }
+
+        /* Right positioned */
+        &.amos-vertical-navigation-position-right {
+            /* Side mode */
+            &.amos-vertical-navigation-mode-side {
+                margin-right: calc(
+                    var(--amos-vertical-navigation-compact-width) * -1
+                );
+            }
+
+            /* Opened */
+            &.amos-vertical-navigation-opened {
+                margin-right: 0;
+            }
+
+            /* Aside wrapper */
+            .amos-vertical-navigation-aside-wrapper {
+                left: auto;
+                right: var(--amos-vertical-navigation-compact-width);
+            }
+        }
+
+        /* Wrapper */
+        .amos-vertical-navigation-wrapper {
+            /* Content */
+            .amos-vertical-navigation-content {
+                > amos-vertical-navigation-aside-item,
+                > amos-vertical-navigation-basic-item {
+                    .amos-vertical-navigation-item-wrapper {
+                        margin: 4px 8px 0 8px;
+
+                        .amos-vertical-navigation-item {
+                            flex-direction: column;
+                            justify-content: center;
+                            padding: 12px;
+                            margin-top: 16em;
+                            border-radius: 6px;
+
+                            .amos-vertical-navigation-item-icon {
+                                margin-right: 0;
+                            }
+
+                            .amos-vertical-navigation-item-title-wrapper {
+                                margin-top: 8px;
+
+                                .amos-vertical-navigation-item-title {
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    text-align: center;
+                                    line-height: 16px;
+                                }
+
+                                .amos-vertical-navigation-item-subtitle {
+                                    display: none !important;
+                                }
+                            }
+
+                            .amos-vertical-navigation-item-badge {
+                                position: absolute;
+                                top: 12px;
+                                left: 64px;
+                            }
+                        }
+                    }
+
+                    > amos-vertical-navigation-collapsable-item {
+                        display: none;
+                    }
+
+                    > amos-vertical-navigation-group-item {
+                        > .amos-vertical-navigation-item-wrapper {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Aside wrapper */
+        .amos-vertical-navigation-aside-wrapper {
+            left: var(--amos-vertical-navigation-compact-width);
+        }
+    }
+}

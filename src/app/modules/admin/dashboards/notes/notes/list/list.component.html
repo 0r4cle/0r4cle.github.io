@@ -127,7 +127,7 @@
                             ></mat-icon>
                         </button>
                         <mat-form-field
-                            class="fuse-mat-rounded fuse-mat-dense fuse-mat-no-subscript flex-auto ml-4 lg:ml-0 sm:pr-0 md:pr-0 lg:pr-40 xl:pr-40 pr-0"
+                            class="amos-mat-rounded amos-mat-dense amos-mat-no-subscript flex-auto ml-4 lg:ml-0 sm:pr-0 md:pr-0 lg:pr-40 xl:pr-40 pr-0"
                         >
                             <mat-icon
                                 class="icon-size-5"
@@ -145,7 +145,7 @@
                     </div>
                     <!-- New note -->
                     <button
-                        class="ml-4 px-1 sm:px-4 min-w-10"
+                        class="ml-4 px-1 sm:px-4 min-w-10 text-white "
                         mat-flat-button
                         [color]="'primary'"
                         (click)="addNewNote()"
@@ -164,7 +164,7 @@
                 <ng-container *ngIf="notes$ | async as notes; else loading">
                     <ng-container *ngIf="notes.length; else noNotes">
                         <!-- Masonry layout -->
-                        <fuse-masonry
+                        <amos-masonry
                             class="-mx-2 mt-8"
                             [items]="notes"
                             [columns]="masonryColumns"
@@ -422,7 +422,7 @@
                                     </div>
                                 </ng-container>
                             </ng-template>
-                        </fuse-masonry>
+                        </amos-masonry>
                     </ng-container>
                 </ng-container>
 

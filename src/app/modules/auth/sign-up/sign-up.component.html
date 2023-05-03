@@ -98,7 +98,7 @@
             </div>
 
             <!-- Alert -->
-            <fuse-alert
+            <amos-alert
                 class="mt-8 -mb-4"
                 *ngIf="showAlert"
                 [appearance]="'outline'"
@@ -107,7 +107,7 @@
                 [@shake]="alert.type === 'error'"
             >
                 {{ alert.message }}
-            </fuse-alert>
+            </amos-alert>
 
             <!-- Sign Up form -->
             <form class="mt-8" [formGroup]="signUpForm" #signUpNgForm="ngForm">
@@ -197,7 +197,7 @@
 
                 <!-- Submit button -->
                 <button
-                    class="fuse-mat-button-large rounded-xl w-full mt-6 bg-[#376DED]"
+                    class="amos-mat-button-large rounded-xl w-full mt-6 bg-[#376DED]"
                     mat-flat-button
                     [color]="'primary'"
                     [disabled]="signUpForm.disabled"

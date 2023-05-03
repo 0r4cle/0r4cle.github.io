@@ -9,7 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatRippleModule } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { FuseMasonryModule } from '@fuse/components/masonry';
+import { amosMasonryModule } from '@amos/components/masonry';
 import { SharedModule } from 'app/shared/shared.module';
 import { NotesComponent } from 'app/modules/admin/dashboards/notes/notes/notes.component';
 import { NotesDetailsComponent } from 'app/modules/admin/dashboards/notes/notes/details/details.component';
@@ -35,7 +35,7 @@ import { notesRoutes } from 'app/modules/admin/dashboards/notes/notes/notes.rout
         MatMenuModule,
         MatRippleModule,
         MatSidenavModule,
-        FuseMasonryModule,
+        amosMasonryModule,
         SharedModule,
     ],
 })

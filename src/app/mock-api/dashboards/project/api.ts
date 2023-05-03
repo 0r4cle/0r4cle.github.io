@@ -1,20 +1,18 @@
 import { Injectable } from '@angular/core';
 import { cloneDeep } from 'lodash-es';
-import { FuseMockApiService } from '@fuse/lib/mock-api';
+import { amosMockApiService } from '@amos/lib/mock-api';
 import { project as projectData } from 'app/mock-api/dashboards/project/data';
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: 'root',
 })
-export class ProjectMockApi
-{
+export class ProjectMockApi {
     private _project: any = projectData;
 
     /**
      * Constructor
      */
-    constructor(private _fuseMockApiService: FuseMockApiService)
-    {
+    constructor(private _amosMockApiService: amosMockApiService) {
         // Register Mock API handlers
         this.registerHandlers();
     }
@@ -26,12 +24,11 @@ export class ProjectMockApi
     /**
      * Register Mock API handlers
      */
-    registerHandlers(): void
-    {
+    registerHandlers(): void {
         // -----------------------------------------------------------------------------------------------------
         // @ Sales - GET
         // -----------------------------------------------------------------------------------------------------
-        this._fuseMockApiService
+        this._amosMockApiService
             .onGet('api/dashboards/project')
             .reply(() => [200, cloneDeep(this._project)]);
     }

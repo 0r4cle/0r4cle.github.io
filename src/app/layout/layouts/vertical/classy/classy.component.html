@@ -1,8 +1,8 @@
 <!-- Loading bar -->
-<fuse-loading-bar></fuse-loading-bar>
+<amos-loading-bar></amos-loading-bar>
 
 <!-- Navigation -->
-<fuse-vertical-navigation
+<amos-vertical-navigation
     class="dark:bg-zinc-900 bg-white print:hidden"
     [mode]="isScreenSmall ? 'over' : 'side'"
     [name]="'mainNavigation'"
@@ -10,7 +10,7 @@
     [opened]="!isScreenSmall"
 >
     <!-- Navigation header hook -->
-    <ng-container fuseVerticalNavigationContentHeader>
+    <ng-container amosVerticalNavigationContentHeader>
         <div
             class="flex items-center w-full sm:p-9 xxl:mt-20 xl:mt-10 md:pl-9 sm:pt-18 md:pt-3 xl:pt-7 lg:pt-10 sm:pl-10 md:pl-10"
         >
@@ -19,7 +19,7 @@
                 <div
                     class="text-center w-50 absolute items-center xxl:-mt-20 xl:-mt-12 lg:-mt-5 md:-mt-1 sm:-mt-12 ml-6 justify-center text-4xl font-bold dark:text-white text-slate-900 md:visible sm:visible invisible"
                 >
-                    <!-- BLACK -->
+                    <!-- Black -->
                     <svg
                         class="dark:block hidden"
                         width="150"
@@ -54,7 +54,7 @@
                         />
                     </svg>
 
-                    <!-- WHITE -->
+                    <!-- White -->
 
                     <svg
                         class="block dark:hidden"
@@ -104,11 +104,11 @@
                         [svgIcon]="'heroicons_outline:menu-alt-2'"
                     ></mat-icon>
                 </button>
-                <!-- <notifications></notifications> -->
+             
                 <languages
                     class="md:invisible sm:invisible invisible"
                 ></languages>
-                <!-- <fuse-fullscreen class="hidden md:block"></fuse-fullscreen> -->
+  
 
                 <messages
                     class="md:invisible sm:invisible invisible"
@@ -208,7 +208,7 @@
         </div>
     </ng-container>
     <!-- Navigation footer hook -->
-    <ng-container fuseVerticalNavigationContentFooter>
+    <ng-container amosVerticalNavigationContentFooter>
         <div
             class="flex flex-0 items-center justify-center pr-6 pl-2 mt-2 mb-4 xxl:mt-80 xl:mt-30 opacity-12"
         ></div>
@@ -282,7 +282,7 @@
             </div>
         </div>
     </ng-container>
-</fuse-vertical-navigation>
+</amos-vertical-navigation>
 
 <!-- Wrapper -->
 
@@ -488,7 +488,7 @@
 
                 <languages class="md:visible sm:visible invisible"></languages>
 
-                <!-- <fuse-fullscreen class="hidden md:block"></fuse-fullscreen> -->
+                <!-- <amos-fullscreen class="hidden md:block"></amos-fullscreen> -->
                 <!-- <search
                     class="md:invisible sm:invisible invisible"
                     [appearance]="'bar'"
@@ -508,7 +508,7 @@
 
     <!-- Footer -->
     <!--<div class="relative flex flex-0 items-center justify-start w-full h-14 px-4 md:px-6 z-49 border-t bg-card dark:bg-transparent print:hidden">
-        <span class="font-medium text-secondary">Fuse &copy; {{currentYear}}</span>
+        <span class="font-medium text-secondary">amos &copy; {{currentYear}}</span>
     </div>-->
 </div>
 

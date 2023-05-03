@@ -1,0 +1,41 @@
+<div class="amos-horizontal-navigation-wrapper">
+    <ng-container *ngFor="let item of navigation; trackBy: trackByFn">
+      
+        <ng-container
+            *ngIf="(item.hidden && !item.hidden(item)) || !item.hidden"
+        >
+          
+            <ng-container *ngIf="item.type === 'basic'">
+                <amos-horizontal-navigation-basic-item
+                    class="amos-horizontal-navigation-menu-item"
+                    [item]="item"
+                    [name]="name"
+                ></amos-horizontal-navigation-basic-item>
+            </ng-container>
+
+           
+            <ng-container
+                *ngIf="
+                    item.type === 'aside' ||
+                    item.type === 'collapsable' ||
+                    item.type === 'group'
+                "
+            >
+                <amos-horizontal-navigation-branch-item
+                    class="amos-horizontal-navigation-menu-item"
+                    [item]="item"
+                    [name]="name"
+                ></amos-horizontal-navigation-branch-item>
+            </ng-container>
+
+          
+            <ng-container *ngIf="item.type === 'spacer'">
+                <amos-horizontal-navigation-spacer-item
+                    class="amos-horizontal-navigation-menu-item"
+                    [item]="item"
+                    [name]="name"
+                ></amos-horizontal-navigation-spacer-item>
+            </ng-container>
+        </ng-container>
+    </ng-container>
+</div>

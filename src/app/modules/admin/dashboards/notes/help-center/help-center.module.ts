@@ -5,7 +5,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { FuseAlertModule } from '@fuse/components/alert';
+import { amosAlertModule } from '@amos/components/alert';
 import { SharedModule } from 'app/shared/shared.module';
 import { HelpCenterComponent } from 'app/modules/admin/dashboards/notes/help-center/help-center.component';
 import { HelpCenterFaqsComponent } from 'app/modules/admin/dashboards/notes/help-center/faqs/faqs.component';
@@ -31,7 +31,7 @@ import { helpCenterRoutes } from 'app/modules/admin/dashboards/notes/help-center
         MatFormFieldModule,
         MatIconModule,
         MatInputModule,
-        FuseAlertModule,
+        amosAlertModule,
         SharedModule,
     ],
 })

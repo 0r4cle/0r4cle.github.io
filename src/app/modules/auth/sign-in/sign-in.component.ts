@@ -6,20 +6,20 @@ import {
     Validators,
 } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { fuseAnimations } from '@fuse/animations';
-import { FuseAlertType } from '@fuse/components/alert';
+import { amosAnimations } from '@amos/animations';
+import { amosAlertType } from '@amos/components/alert';
 import { AuthService } from 'app/core/auth/auth.service';
 
 @Component({
     selector: 'auth-sign-in',
     templateUrl: './sign-in.component.html',
     encapsulation: ViewEncapsulation.None,
-    animations: fuseAnimations,
+    animations: amosAnimations,
 })
 export class AuthSignInComponent implements OnInit {
     @ViewChild('signInNgForm') signInNgForm: NgForm;
 
-    alert: { type: FuseAlertType; message: string } = {
+    alert: { type: amosAlertType; message: string } = {
         type: 'success',
         message: '',
     };

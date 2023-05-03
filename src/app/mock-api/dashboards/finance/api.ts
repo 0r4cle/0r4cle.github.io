@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { cloneDeep } from 'lodash-es';
-import { FuseMockApiService } from '@fuse/lib/mock-api';
+import { amosMockApiService } from '@amos/lib/mock-api';
 import { finance as financeData } from 'app/mock-api/dashboards/finance/data';
 
 @Injectable({
@@ -12,7 +12,7 @@ export class FinanceMockApi {
     /**
      * Constructor
      */
-    constructor(private _fuseMockApiService: FuseMockApiService) {
+    constructor(private _amosMockApiService: amosMockApiService) {
         // Register Mock API handlers
         this.registerHandlers();
     }
@@ -28,7 +28,7 @@ export class FinanceMockApi {
         // -----------------------------------------------------------------------------------------------------
         // @ Sales - GET
         // -----------------------------------------------------------------------------------------------------
-        this._fuseMockApiService
+        this._amosMockApiService
             .onGet('api/dashboards/finance')
             .reply(() => [200, cloneDeep(this._finance)]);
     }

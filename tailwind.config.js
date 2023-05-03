@@ -3,7 +3,7 @@ const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
 const generatePalette = require(path.resolve(
     __dirname,
-    "src/@fuse/tailwind/utils/generate-palette"
+    "src/@amos/tailwind/utils/generate-palette"
 ));
 
 /**
@@ -207,61 +207,61 @@ const config = {
             typography: ({ theme }) => ({
                 DEFAULT: {
                     css: {
-                        color: "var(--fuse-text-default)",
+                        color: "var(--amos-text-default)",
                         '[class~="lead"]': {
-                            color: "var(--fuse-text-secondary)",
+                            color: "var(--amos-text-secondary)",
                         },
                         a: {
-                            color: "var(--fuse-primary-500)",
+                            color: "var(--amos-primary-500)",
                         },
                         strong: {
-                            color: "var(--fuse-text-default)",
+                            color: "var(--amos-text-default)",
                         },
                         "ol > li::before": {
-                            color: "var(--fuse-text-secondary)",
+                            color: "var(--amos-text-secondary)",
                         },
                         "ul > li::before": {
-                            backgroundColor: "var(--fuse-text-hint)",
+                            backgroundColor: "var(--amos-text-hint)",
                         },
                         hr: {
-                            borderColor: "var(--fuse-border)",
+                            borderColor: "var(--amos-border)",
                         },
                         blockquote: {
-                            color: "var(--fuse-text-default)",
-                            borderLeftColor: "var(--fuse-border)",
+                            color: "var(--amos-text-default)",
+                            borderLeftColor: "var(--amos-border)",
                         },
                         h1: {
-                            color: "var(--fuse-text-default)",
+                            color: "var(--amos-text-default)",
                         },
                         h2: {
-                            color: "var(--fuse-text-default)",
+                            color: "var(--amos-text-default)",
                         },
                         h3: {
-                            color: "var(--fuse-text-default)",
+                            color: "var(--amos-text-default)",
                         },
                         h4: {
-                            color: "var(--fuse-text-default)",
+                            color: "var(--amos-text-default)",
                         },
                         "figure figcaption": {
-                            color: "var(--fuse-text-secondary)",
+                            color: "var(--amos-text-secondary)",
                         },
                         code: {
-                            color: "var(--fuse-text-default)",
+                            color: "var(--amos-text-default)",
                             fontWeight: "500",
                         },
                         "a code": {
-                            color: "var(--fuse-primary)",
+                            color: "var(--amos-primary)",
                         },
                         pre: {
                             color: theme("colors.white"),
                             backgroundColor: theme("colors.gray.800"),
                         },
                         thead: {
-                            color: "var(--fuse-text-default)",
-                            borderBottomColor: "var(--fuse-border)",
+                            color: "var(--amos-text-default)",
+                            borderBottomColor: "var(--amos-border)",
                         },
                         "tbody tr": {
-                            borderBottomColor: "var(--fuse-border)",
+                            borderBottomColor: "var(--amos-border)",
                         },
                         'ol[type="A" s]': false,
                         'ol[type="a" s]': false,
@@ -298,13 +298,13 @@ const config = {
         // Amos - Tailwind plugins
         require(path.resolve(
             __dirname,
-            "src/@fuse/tailwind/plugins/utilities"
+            "src/@amos/tailwind/plugins/utilities"
         )),
         require(path.resolve(
             __dirname,
-            "src/@fuse/tailwind/plugins/icon-size"
+            "src/@amos/tailwind/plugins/icon-size"
         )),
-        require(path.resolve(__dirname, "src/@fuse/tailwind/plugins/theming"))({
+        require(path.resolve(__dirname, "src/@amos/tailwind/plugins/theming"))({
             themes,
         }),
 

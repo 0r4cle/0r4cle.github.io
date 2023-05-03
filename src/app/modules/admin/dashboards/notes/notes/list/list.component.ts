@@ -17,7 +17,7 @@ import {
     takeUntil,
 } from 'rxjs';
 
-import { FuseMediaWatcherService } from '@fuse/services/media-watcher';
+import { amosMediaWatcherService } from '@amos/services/media-watcher';
 import { NotesDetailsComponent } from 'app/modules/admin/dashboards/notes/notes/details/details.component';
 import { NotesLabelsComponent } from 'app/modules/admin/dashboards/notes/notes/labels/labels.component';
 import { NotesService } from 'app/modules/admin/dashboards/notes/notes/notes.service';
@@ -53,7 +53,7 @@ export class NotesListComponent implements OnInit, OnDestroy {
      */
     constructor(
         private _changeDetectorRef: ChangeDetectorRef,
-        private _fuseMediaWatcherService: FuseMediaWatcherService,
+        private _amosMediaWatcherService: amosMediaWatcherService,
         private _matDialog: MatDialog,
         private _notesService: NotesService,
         private _userService: UserService
@@ -146,7 +146,7 @@ export class NotesListComponent implements OnInit, OnDestroy {
         );
 
         // Subscribe to media changes
-        this._fuseMediaWatcherService.onMediaChange$
+        this._amosMediaWatcherService.onMediaChange$
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe(({ matchingAliases }) => {
                 // Set the drawerMode and drawerOpened if the given breakpoint is active

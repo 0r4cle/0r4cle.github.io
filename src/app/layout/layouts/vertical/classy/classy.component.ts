@@ -1,15 +1,15 @@
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
-import { FuseMediaWatcherService } from '@fuse/services/media-watcher';
+import { amosMediaWatcherService } from '@amos/services/media-watcher';
 import {
-    FuseNavigationService,
-    FuseVerticalNavigationComponent,
-} from '@fuse/components/navigation';
+    amosNavigationService,
+    amosVerticalNavigationComponent,
+} from '@amos/components/navigation';
 import { Navigation } from 'app/core/navigation/navigation.types';
 import { NavigationService } from 'app/core/navigation/navigation.service';
 import { User } from 'app/core/user/user.types';
-import { FuseConfigService } from '@fuse/services/config';
+import { amosConfigService } from '@amos/services/config';
 import { AppConfig, Scheme, Theme, Themes } from 'app/core/config/app.config';
 import { UserService } from 'app/core/user/user.service';
 
@@ -35,9 +35,9 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
         private _router: Router,
         private _navigationService: NavigationService,
         private _userService: UserService,
-        private _fuseMediaWatcherService: FuseMediaWatcherService,
-        private _fuseNavigationService: FuseNavigationService,
-        private _fuseConfigService: FuseConfigService
+        private _amosMediaWatcherService: amosMediaWatcherService,
+        private _amosNavigationService: amosNavigationService,
+        private _amosConfigService: amosConfigService
     ) {}
 
     // -----------------------------------------------------------------------------------------------------
@@ -74,7 +74,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
             });
 
         // Subscribe to media changes
-        this._fuseMediaWatcherService.onMediaChange$
+        this._amosMediaWatcherService.onMediaChange$
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe(({ matchingAliases }) => {
                 // Check if the screen is small
@@ -83,7 +83,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
 
         {
             // Subscribe to config changes
-            this._fuseConfigService.config$
+            this._amosConfigService.config$
                 .pipe(takeUntil(this._unsubscribeAll))
                 .subscribe((config: AppConfig) => {
                     // Store the config
@@ -113,7 +113,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
     toggleNavigation(name: string): void {
         // Get the navigation
         const navigation =
-            this._fuseNavigationService.getComponent<FuseVerticalNavigationComponent>(
+            this._amosNavigationService.getComponent<amosVerticalNavigationComponent>(
                 name
             );
 
@@ -128,10 +128,10 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
      * @param scheme
      */
     setScheme(scheme: Scheme): void {
-        this._fuseConfigService.config = { scheme };
+        this._amosConfigService.config = { scheme };
     }
     updateScheme(scheme: Scheme): void {
-        this._fuseConfigService.config = { scheme };
+        this._amosConfigService.config = { scheme };
     }
 
     // handleCoinUpdate(user: User) {

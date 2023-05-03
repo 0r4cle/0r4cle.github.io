@@ -7,7 +7,7 @@
     },
     "newProjectRoot": "projects",
     "projects": {
-        "fuse": {
+        "amos": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -48,13 +48,13 @@
                             }
                         ],
                         "stylePreprocessorOptions": {
-                            "includePaths": ["src/@fuse/styles"]
+                            "includePaths": ["src/@amos/styles"]
                         },
                         "styles": [
-                            "src/@fuse/styles/tailwind.scss",
-                            "src/@fuse/styles/themes.scss",
+                            "src/@amos/styles/tailwind.scss",
+                            "src/@amos/styles/themes.scss",
                             "src/styles/vendors.scss",
-                            "src/@fuse/styles/main.scss",
+                            "src/@amos/styles/main.scss",
                             "src/styles/styles.scss",
                             "src/styles/tailwind.scss",
                             "./node_modules/@syncfusion/ej2-material-theme/styles/material.css"
@@ -98,10 +98,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "fuse:build:production"
+                            "browserTarget": "amos:build:production"
                         },
                         "development": {
-                            "browserTarget": "fuse:build:development"
+                            "browserTarget": "amos:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -109,7 +109,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "fuse:build"
+                        "browserTarget": "amos:build"
                     }
                 },
                 "test": {

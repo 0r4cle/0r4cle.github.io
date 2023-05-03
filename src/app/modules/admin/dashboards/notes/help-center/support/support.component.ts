@@ -5,14 +5,14 @@ import {
     NgForm,
     Validators,
 } from '@angular/forms';
-import { fuseAnimations } from '@fuse/animations';
+import { amosAnimations } from '@amos/animations';
 import { HelpCenterService } from 'app/modules/admin/dashboards/notes/help-center/help-center.service';
 
 @Component({
     selector: 'help-center-support',
     templateUrl: './support.component.html',
     encapsulation: ViewEncapsulation.None,
-    animations: fuseAnimations,
+    animations: amosAnimations,
 })
 export class HelpCenterSupportComponent implements OnInit {
     @ViewChild('supportNgForm') supportNgForm: NgForm;

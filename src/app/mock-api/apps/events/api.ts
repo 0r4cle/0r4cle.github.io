@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { cloneDeep } from 'lodash-es';
-import { FuseMockApiService } from '@fuse/lib/mock-api/mock-api.service';
-import { FuseMockApiUtils } from '@fuse/lib/mock-api';
+import { amosMockApiService } from '@amos/lib/mock-api/mock-api.service';
+import { amosMockApiUtils } from '@amos/lib/mock-api';
 
 @Injectable({
     providedIn: 'root',
@@ -10,7 +10,7 @@ export class EventsMockApi {
     /**
      * Constructor
      */
-    constructor(private _fuseMockApiService: FuseMockApiService) {
+    constructor(private _amosMockApiService: amosMockApiService) {
         // Register Mock API handlers
         this.registerHandlers();
 
@@ -32,7 +32,7 @@ export class EventsMockApi {
         // -----------------------------------------------------------------------------------------------------
         // @ Chat - GET
         // -----------------------------------------------------------------------------------------------------
-        this._fuseMockApiService.onGet('api/apps/events/events');
+        this._amosMockApiService.onGet('api/apps/events/events');
 
         // -----------------------------------------------------------------------------------------------------
         // @ Chat - PATCH

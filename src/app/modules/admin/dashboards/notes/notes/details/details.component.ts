@@ -66,7 +66,7 @@ export class NotesDetailsComponent implements OnInit, OnDestroy {
         });
     }
 
-    // LIKE DISLIKE
+    // Like Dislike
     likes = 0;
     dislikes = 0;
 

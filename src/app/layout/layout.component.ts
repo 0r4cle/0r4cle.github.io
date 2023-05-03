@@ -9,10 +9,10 @@ import {
 import { DOCUMENT } from '@angular/common';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { combineLatest, filter, map, Subject, takeUntil } from 'rxjs';
-import { FuseConfigService } from '@fuse/services/config';
-import { FuseMediaWatcherService } from '@fuse/services/media-watcher';
-import { FusePlatformService } from '@fuse/services/platform';
-import { FUSE_VERSION } from '@fuse/version';
+import { amosConfigService } from '@amos/services/config';
+import { amosMediaWatcherService } from '@amos/services/media-watcher';
+import { amosPlatformService } from '@amos/services/platform';
+import { amos_VERSION } from '@amos/version';
 import { Layout } from 'app/layout/layout.types';
 import { AppConfig } from 'app/core/config/app.config';
 
@@ -37,9 +37,9 @@ export class LayoutComponent implements OnInit, OnDestroy {
         @Inject(DOCUMENT) private _document: any,
         private _renderer2: Renderer2,
         private _router: Router,
-        private _fuseConfigService: FuseConfigService,
-        private _fuseMediaWatcherService: FuseMediaWatcherService,
-        private _fusePlatformService: FusePlatformService
+        private _amosConfigService: amosConfigService,
+        private _amosMediaWatcherService: amosMediaWatcherService,
+        private _amosPlatformService: amosPlatformService
     ) {}
 
     // -----------------------------------------------------------------------------------------------------
@@ -52,8 +52,8 @@ export class LayoutComponent implements OnInit, OnDestroy {
     ngOnInit(): void {
         // Set the theme and scheme based on the configuration
         combineLatest([
-            this._fuseConfigService.config$,
-            this._fuseMediaWatcherService.onMediaQueryChange$([
+            this._amosConfigService.config$,
+            this._amosMediaWatcherService.onMediaQueryChange$([
                 '(prefers-color-scheme: light)',
                 '(prefers-color-scheme: dark)',
             ]),
@@ -90,7 +90,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
             });
 
         // Subscribe to config changes
-        this._fuseConfigService.config$
+        this._amosConfigService.config$
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((config: AppConfig) => {
                 // Store the config
@@ -114,14 +114,14 @@ export class LayoutComponent implements OnInit, OnDestroy {
         // Set the app version
         this._renderer2.setAttribute(
             this._document.querySelector('[ng-version]'),
-            'fuse-version',
-            FUSE_VERSION
+            'amos-version',
+            amos_VERSION
         );
 
         // Set the OS name
         this._renderer2.addClass(
             this._document.body,
-            this._fusePlatformService.osName
+            this._amosPlatformService.osName
         );
     }
 
@@ -163,25 +163,10 @@ export class LayoutComponent implements OnInit, OnDestroy {
             }
         }
 
-        // 3. Iterate through the paths and change the layout as we find
-        // a config for it.
-        //
-        // The reason we do this is that there might be empty grouping
-        // paths or componentless routes along the path. Because of that,
-        // we cannot just assume that the layout configuration will be
-        // in the last path's config or in the first path's config.
-        //
-        // So, we get all the paths that matched starting from root all
-        // the way to the current activated route, walk through them one
-        // by one and change the layout as we find the layout config. This
-        // way, layout configuration can live anywhere within the path and
-        // we won't miss it.
-        //
-        // Also, this will allow overriding the layout in any time so we
-        // can have different layouts for different routes.
+      
         const paths = route.pathFromRoot;
         paths.forEach((path) => {
-            // Check if there is a 'layout' data
+        
             if (
                 path.routeConfig &&
                 path.routeConfig.data &&
@@ -222,7 +207,6 @@ export class LayoutComponent implements OnInit, OnDestroy {
             }
         });
 
-        // Add class name for the currently selected theme
         this._document.body.classList.add(this.theme);
     }
 }

@@ -1,0 +1,136 @@
+<div class="amos-vertical-navigation-wrapper">
+    <!-- Header -->
+    <div class="amos-vertical-navigation-header">
+        <ng-content select="[amosVerticalNavigationHeader]"></ng-content>
+    </div>
+
+    <!-- Content -->
+    <div
+        class="amos-vertical-navigation-content"
+        amosScrollbar
+        [amosScrollbarOptions]="{
+            wheelPropagation: inner,
+            suppressScrollX: true
+        }"
+        #navigationContent
+    >
+        <!-- Content header -->
+        <div class="amos-vertical-navigation-content-header">
+            <ng-content
+                select="[amosVerticalNavigationContentHeader]"
+            ></ng-content>
+        </div>
+
+        <!-- Items -->
+        <ng-container *ngFor="let item of navigation; trackBy: trackByFn">
+            <img src="" alt="" />
+            <!-- Skip the hidden items -->
+            <ng-container
+                *ngIf="(item.hidden && !item.hidden(item)) || !item.hidden"
+            >
+                <!-- Aside -->
+                <ng-container *ngIf="item.type === 'aside'">
+                    <amos-vertical-navigation-aside-item
+                        [item]="item"
+                        [name]="name"
+                        [activeItemId]="activeAsideItemId"
+                        [autoCollapse]="autoCollapse"
+                        [skipChildren]="true"
+                        (click)="toggleAside(item)"
+                    ></amos-vertical-navigation-aside-item>
+                </ng-container>
+
+                <!-- Basic -->
+                <ng-container *ngIf="item.type === 'basic'">
+                    <amos-vertical-navigation-basic-item
+                        [item]="item"
+                        [name]="name"
+                    ></amos-vertical-navigation-basic-item>
+                </ng-container>
+
+                <!-- Collapsable -->
+                <ng-container *ngIf="item.type === 'collapsable'">
+                    <amos-vertical-navigation-collapsable-item
+                        [item]="item"
+                        [name]="name"
+                        [autoCollapse]="autoCollapse"
+                    ></amos-vertical-navigation-collapsable-item>
+                </ng-container>
+
+                <!-- Divider -->
+                <ng-container *ngIf="item.type === 'divider'">
+                    <amos-vertical-navigation-divider-item
+                        [item]="item"
+                        [name]="name"
+                    ></amos-vertical-navigation-divider-item>
+                </ng-container>
+
+                <!-- Group -->
+                <ng-container *ngIf="item.type === 'group'">
+                    <amos-vertical-navigation-group-item
+                        [item]="item"
+                        [name]="name"
+                        [autoCollapse]="autoCollapse"
+                    ></amos-vertical-navigation-group-item>
+                </ng-container>
+
+                <!-- Spacer -->
+                <ng-container *ngIf="item.type === 'spacer'">
+                    <amos-vertical-navigation-spacer-item
+                        [item]="item"
+                        [name]="name"
+                    ></amos-vertical-navigation-spacer-item>
+                </ng-container>
+            </ng-container>
+        </ng-container>
+
+        <!-- Content footer -->
+        <div class="amos-vertical-navigation-content-footer">
+            <ng-content
+                select="[amosVerticalNavigationContentFooter]"
+            ></ng-content>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="amos-vertical-navigation-footer">
+        <ng-content select="[amosVerticalNavigationFooter]"></ng-content>
+    </div>
+</div>
+
+<!-- Aside -->
+<ng-container *ngIf="activeAsideItemId">
+    <div
+        class="amos-vertical-navigation-aside-wrapper"
+        amosScrollbar
+        [amosScrollbarOptions]="{
+            wheelPropagation: false,
+            suppressScrollX: true
+        }"
+        [@fadeInLeft]="position === 'left'"
+        [@fadeInRight]="position === 'right'"
+        [@fadeOutLeft]="position === 'left'"
+        [@fadeOutRight]="position === 'right'"
+    >
+        <!-- Items -->
+        <ng-container *ngFor="let item of navigation; trackBy: trackByFn">
+            <!-- Skip the hidden items -->
+            <ng-container
+                *ngIf="(item.hidden && !item.hidden(item)) || !item.hidden"
+            >
+                <!-- Aside -->
+                <ng-container
+                    *ngIf="
+                        item.type === 'aside' && item.id === activeAsideItemId
+                    "
+                >
+                    <amos-vertical-navigation-aside-item
+                        [item]="item"
+                        [name]="name"
+                        [autoCollapse]="autoCollapse"
+                    ></amos-vertical-navigation-aside-item>
+                </ng-container>
+            </ng-container>
+        </ng-container>
+    </div>
+</ng-container>

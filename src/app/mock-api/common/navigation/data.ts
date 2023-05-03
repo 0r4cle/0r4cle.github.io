@@ -1,7 +1,7 @@
 /* tslint:disable:max-line-length */
-import { FuseNavigationItem } from '@fuse/components/navigation';
+import { amosNavigationItem } from '@amos/components/navigation';
 
-export const defaultNavigation: FuseNavigationItem[] = [
+export const defaultNavigation: amosNavigationItem[] = [
     {
         id: 'home',
         title: 'Home',
@@ -32,7 +32,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
     },
 ];
 
-export const compactNavigation: FuseNavigationItem[] = [
+export const compactNavigation: amosNavigationItem[] = [
     {
         id: 'home',
         title: 'Home',
@@ -62,7 +62,7 @@ export const compactNavigation: FuseNavigationItem[] = [
         link: '/dashboards/settings',
     },
 ];
-export const futuristicNavigation: FuseNavigationItem[] = [
+export const futuristicNavigation: amosNavigationItem[] = [
     {
         id: 'home',
         title: 'Home',
@@ -92,7 +92,7 @@ export const futuristicNavigation: FuseNavigationItem[] = [
         link: '/dashboards/settings',
     },
 ];
-export const horizontalNavigation: FuseNavigationItem[] = [
+export const horizontalNavigation: amosNavigationItem[] = [
     {
         id: 'home',
         title: 'Home',

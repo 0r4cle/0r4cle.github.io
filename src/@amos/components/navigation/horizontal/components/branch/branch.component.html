@@ -1,0 +1,139 @@
+<ng-container *ngIf="!child">
+    <div
+        [ngClass]="{
+            'amos-horizontal-navigation-menu-active': trigger.menuOpen,
+            'amos-horizontal-navigation-menu-active-forced': item.active
+        }"
+        [matMenuTriggerFor]="matMenu"
+        (onMenuOpen)="triggerChangeDetection()"
+        (onMenuClose)="triggerChangeDetection()"
+        #trigger="matMenuTrigger"
+    >
+        <ng-container
+            *ngTemplateOutlet="itemTemplate; context: { $implicit: item }"
+        ></ng-container>
+    </div>
+</ng-container>
+
+<mat-menu
+    class="amos-horizontal-navigation-menu-panel"
+    [overlapTrigger]="false"
+    #matMenu="matMenu"
+>
+    <ng-container *ngFor="let item of item.children; trackBy: trackByFn">
+      
+        <ng-container
+            *ngIf="(item.hidden && !item.hidden(item)) || !item.hidden"
+        >
+            <!-- Basic -->
+            <ng-container *ngIf="item.type === 'basic'">
+                <div
+                    class="amos-horizontal-navigation-menu-item"
+                    [disabled]="item.disabled"
+                    mat-menu-item
+                >
+                    <amos-horizontal-navigation-basic-item
+                        [item]="item"
+                        [name]="name"
+                    ></amos-horizontal-navigation-basic-item>
+                </div>
+            </ng-container>
+
+            
+            <ng-container
+                *ngIf="
+                    item.type === 'aside' ||
+                    item.type === 'collapsable' ||
+                    item.type === 'group'
+                "
+            >
+                <div
+                    class="amos-horizontal-navigation-menu-item"
+                    [disabled]="item.disabled"
+                    [matMenuTriggerFor]="branch.matMenu"
+                    mat-menu-item
+                >
+                    <ng-container
+                        *ngTemplateOutlet="
+                            itemTemplate;
+                            context: { $implicit: item }
+                        "
+                    ></ng-container>
+                    <amos-horizontal-navigation-branch-item
+                        [child]="true"
+                        [item]="item"
+                        [name]="name"
+                        #branch
+                    ></amos-horizontal-navigation-branch-item>
+                </div>
+            </ng-container>
+
+            
+            <ng-container *ngIf="item.type === 'divider'">
+                <div class="amos-horizontal-navigation-menu-item" mat-menu-item>
+                    <amos-horizontal-navigation-divider-item
+                        [item]="item"
+                        [name]="name"
+                    ></amos-horizontal-navigation-divider-item>
+                </div>
+            </ng-container>
+        </ng-container>
+    </ng-container>
+</mat-menu>
+
+
+<ng-template let-item #itemTemplate>
+    <div
+        class="amos-horizontal-navigation-item-wrapper"
+        [class.amos-horizontal-navigation-item-has-subtitle]="!!item.subtitle"
+        [ngClass]="item.classes?.wrapper"
+    >
+        <div
+            class="amos-horizontal-navigation-item"
+            [ngClass]="{
+                'amos-horizontal-navigation-item-disabled': item.disabled,
+                'amos-horizontal-navigation-item-active-forced': item.active
+            }"
+            [matTooltip]="item.tooltip || ''"
+        >
+            <!-- Icon -->
+            <ng-container *ngIf="item.icon">
+                <mat-icon
+                    class="amos-horizontal-navigation-item-icon"
+                    [ngClass]="item.classes?.icon"
+                    [svgIcon]="item.icon"
+                ></mat-icon>
+            </ng-container>
+
+            <!-- Title & Subtitle -->
+            <div class="amos-horizontal-navigation-item-title-wrapper">
+                <div class="amos-horizontal-navigation-item-title">
+                    <span [ngClass]="item.classes?.title">
+                        {{ item.title }}
+                    </span>
+                </div>
+                <ng-container *ngIf="item.subtitle">
+                    <div
+                        class="amos-horizontal-navigation-item-subtitle text-hint"
+                    >
+                        <span [ngClass]="item.classes?.subtitle">
+                            {{ item.subtitle }}
+                        </span>
+                    </div>
+                </ng-container>
+            </div>
+
+            <!-- Badge -->
+            <ng-container *ngIf="item.badge">
+                <div class="amos-horizontal-navigation-item-badge">
+                    <div
+                        class="amos-horizontal-navigation-item-badge-content"
+                        [ngClass]="item.badge.classes"
+                    >
+                        {{ item.badge.title }}
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</ng-template>
